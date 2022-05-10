@@ -6,12 +6,13 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SQLite } from '@ionic-native/sqlite/ngx'; // plugins
+import { SQLite } from '@ionic-native/sqlite/ngx';
+import {RegisterFormPageModule} from "./register-form/register-form.module"; // plugins
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, RegisterFormPageModule],
   providers: [SQLite, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
