@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'footer',
     loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
   },
+  {
+    path: 'register-form',
+    loadChildren: () => import('./register-form/register-form.module').then( m => m.RegisterFormPageModule)
+  },
 ];
 
 @NgModule({
