@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {IonImg} from '@ionic/angular';
 
 @Component({
   selector: 'app-footer',
