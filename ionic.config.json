@@ -1,0 +1,7 @@
+{
+  "name": "PWM-Project_Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
