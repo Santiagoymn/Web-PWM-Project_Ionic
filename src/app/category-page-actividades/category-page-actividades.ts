@@ -15,6 +15,9 @@ import { CategoryPageActividadesPage } from './category-page-actividades.page';
     IonicModule,
     ActividadesPageActividadesPageRoutingModule
   ],
+  exports: [
+    CategoryPageActividadesPage
+  ],
   declarations: [CategoryPageActividadesPage]
 })
 export class ActividadesPageActividadesPageModule {}
