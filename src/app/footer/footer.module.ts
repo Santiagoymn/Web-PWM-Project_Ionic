@@ -9,12 +9,15 @@ import { FooterPageRoutingModule } from './footer-routing.module';
 import { FooterPage } from './footer.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    FooterPageRoutingModule
-  ],
-  declarations: [FooterPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        FooterPageRoutingModule
+    ],
+    exports: [
+        FooterPage
+    ],
+    declarations: [FooterPage]
 })
 export class FooterPageModule {}
