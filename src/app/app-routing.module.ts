@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'carrusel',
     loadChildren: () => import('./carrusel/carrusel.module').then( m => m.CarruselPageModule)
   },
+  {
+    path: 'home-page-categories',
+    loadChildren: () => import('./home-page-categories/home-page-categories.module').then( m => m.HomePageCategoriesPageModule)
+  },
 ];
 
 @NgModule({

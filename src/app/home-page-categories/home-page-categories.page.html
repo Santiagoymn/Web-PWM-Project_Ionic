@@ -1,0 +1,16 @@
+<article class="apartadoCategorias">
+  <h2 class="tituloCategorias">CATEGORÍAS</h2>
+  <section class="imagenesCategorias">
+    <div class="conjuntoImagenDescripcion" *ngFor="let categoria of categorias">
+      <ion-img class="categoryImage" src="{{ categoria.url }}" alt="{{ categoria.alt }}"></ion-img>
+      <a routerLink="/categoria">
+        <div class="descripcion" (click)="puestaVariableLocal(categoria.titulo)">
+          <div class="textoDescripcion">
+            <div class="tituloCategoria"> {{categoria.titulo}} </div>
+            <div class="infoDescripcion">{{categoria.descripcion}}</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+</article>
