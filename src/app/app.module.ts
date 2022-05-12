@@ -18,9 +18,10 @@ import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import {ActividadesPageActividadesPageModule} from './category-page-actividades/category-page-actividades';
 import {FooterPageModule} from './footer/footer.module';
+import {CarruselPage} from "./carrusel/carrusel.page";
 
 @NgModule({
-  declarations: [AppComponent],
+    declarations: [AppComponent, CarruselPage],
   entryComponents: [],
   imports: [
     BrowserModule,

@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'category-page-actividades',
     loadChildren: () => import('./category-page-actividades/category-page-actividades').then(m => m.ActividadesPageActividadesPageModule)
   },
+  {
+    path: 'carrusel',
+    loadChildren: () => import('./carrusel/carrusel.module').then( m => m.CarruselPageModule)
+  },
 ];
 
 @NgModule({
