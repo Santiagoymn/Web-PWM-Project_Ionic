@@ -1,0 +1,24 @@
+.wrapper ion-img{
+  width:100%;
+  object-fit: cover;
+}
+
+@media (min-width: 960px) {
+  .wrapper ion-img {
+    height: 35em;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+  .wrapper ion-img {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper ion-img {
+    height: 15em;
+  }
+}
+
+
