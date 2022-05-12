@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'register-form',
     loadChildren: () => import('./register-form/register-form.module').then( m => m.RegisterFormPageModule)
   },
+  {
+    path: 'category-page-actividades',
+    loadChildren: () => import('./category-page-actividades/category-page-actividades').then(m => m.ActividadesPageActividadesPageModule)
+  },
 ];
 
 @NgModule({
