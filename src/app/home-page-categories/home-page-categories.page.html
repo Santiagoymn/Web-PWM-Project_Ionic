@@ -3,7 +3,7 @@
   <section class="imagenesCategorias">
     <div class="conjuntoImagenDescripcion" *ngFor="let categoria of categorias">
       <ion-img class="categoryImage" src="{{ categoria.url }}" alt="{{ categoria.alt }}"></ion-img>
-      <a routerLink="/categoria">
+      <a routerLink="/category-page-actividades">
         <div class="descripcion" (click)="puestaVariableLocal(categoria.titulo)">
           <div class="textoDescripcion">
             <div class="tituloCategoria"> {{categoria.titulo}} </div>
