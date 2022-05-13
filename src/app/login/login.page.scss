@@ -1,49 +1,111 @@
-h2{
-  margin-bottom: 2rem;
+.login{
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/fotos%2Fplaya-fondo.jpg?alt=media&token=3b196e4c-a117-4d34-86fe-4cb387cda773");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  height: auto;
+  justify-content: center;
+  min-height: 70vh;
 }
-/*////////// GALERÍA //////////*/
-.contenedorGaleria {
-  background-color: #fff;
-  color: #35373a;
-  min-height: 100vh;
-  margin-bottom: 17rem;
+.contenedorForm{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
 }
 
-.galeria .lightbox img {
+.conjuntoInput{
+  display: flex;
+  margin-bottom: -2rem;
+}
+
+.tituloInicioSesion{
+  width:auto;
+  align-self: center;
+}
+
+
+.icono{
+  position: relative;
+}
+form{
+  text-align: left;
+}
+form ion-input{
+  margin-bottom: 3rem;
+  border: 0;
+  border-bottom: 2px solid #f0f0f0;
   width: 100%;
-  transition: 0.2s ease-in-out;
 }
 
-.galeria .lightbox img:hover {
-  transform: scale(1.10);
+.botonForm{
+  text-align: center;
 }
 
+.botonForm ion-button{
+  background-color: #CEE0FC;
+  border-radius: 10%;
+  border: none;
+  width: auto;
+}
+.accesoRegistro{
+  align-self: center;
+}
+.accesoRegistro a{
+  text-decoration: none;
+}
 
-/*////////// MEDIA QUERY //////////*/
+/*/////////// MEDIA QUERY ///////////*/
 /*
   ##Device = Desktops
   ##Screen = 960px to higher resolution desktops
 */
+@media (min-width: 960px){
+  .login{
+    padding: 10rem;
+  }
+  .icono{
+    margin-top: 3rem;
+    height: 2.95rem;
+    width: 3.18rem;
+    bottom: 2.8rem;
+    margin-right: 1.5rem;
+  }
 
-@media (min-width: 960px) {
-  /*////////// GALERÍA //////////*/
-  .galeria {
-    margin-left: 6.25rem;
-    margin-right: 6.25rem;
+  .tituloInicioSesion{
+    margin-top:2rem;
+    margin-left:2rem;
+  }
+
+  .conjuntoInput ion-input{
+    font-size: 2rem;
+  }
+
+  form{
+    margin-right: 5rem;
+    margin-left: 5rem;
+  }
+
+  form ion-label{
+    font-size: 2.2rem;
+  }
+
+  .avisoRestriccion{
+    font-size: 1.5rem;
+  }
+
+  .botonForm ion-button{
+    height: 3rem;
     margin-top: 2rem;
+    font-size: 2rem;
   }
 
-  .galeria .lightbox img {
-    margin-bottom: 1.9rem;
-    box-shadow: 0 0.12rem 0.19rem rgba(0,0,0,0.2);
+  .accesoRegistro{
+    font-size:1.5rem;
+    width:22rem;
   }
-
-  .galeria .lightbox img:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
-  }
-
-  .galeria img {
-    border-radius: 0.25rem;
+  .accesoRegistro a:hover{
+    color: #5094FF;
   }
 }
 
@@ -51,57 +113,104 @@ h2{
   ##Device = Tablets
   ##Screen = 640px to 960px
 */
-
-@media (min-width: 640px) and (max-width: 959px) {
-  /*////////// GALERÍA //////////*/
-  .galeria {
-    margin-left: 2rem;
+@media (min-width: 640px) and (max-width: 960px) {
+  .login{
+    padding: 5rem;
+  }
+  .icono{
+    margin-top: 1.5rem;
+    height: 2.5rem;
+    width: 2.8rem;
+    bottom: 1.3rem;
+    margin-right: 1.3rem;
+  }
+  .conjuntoInput ion-input{
+    font-size: 1.6rem;
+  }
+  .tituloInicioSesion{
+    margin-left:2rem;
+  }
+  form{
     margin-right: 2rem;
-    margin-top: 1rem;
+    margin-left: 2rem;
   }
 
-  .galeria .lightbox img {
+  form ion-label{
+    font-size: 1.8rem;
+  }
+
+  .avisoRestriccion{
+    font-size: 1.2rem;
+  }
+
+  .botonForm ion-button{
+    width:auto;
+    height: 3rem;
     margin-bottom: 2rem;
-    box-shadow: 0 0.12rem 0.19rem rgba(0,0,0,0.2);
+    font-size: 1.6rem;
   }
 
-  .galeria .lightbox img:hover {
-    box-shadow: 0 0.65rem 1rem rgba(0,0,0,0.3);
+  .accesoRegistro{
+    font-size:1.4rem;
+    width:auto;
+    margin-bottom: 1rem;
+  }
+  .accesoRegistro a{
+    color: #5094FF;
   }
 
-  .galeria img {
-    border-radius: 0.3rem;
-  }
 }
 
 /*
   ##Device = Mobiles
   ##Screen = 640px to minimal resolution
 */
-
 @media (max-width: 640px) {
-  /*////////// GALERÍA //////////*/
-
-  .contenedorGaleria{
-    margin-bottom: 10rem;
+  .login{
+    padding: 2rem;
+  }
+  .icono{
+    margin-top: 0.9rem;
+    height: 1.4rem;
+    width: 1.6rem;
+    bottom: 0.4rem;
+    margin-right: 0.89rem;
+  }
+  .conjuntoInput ion-input{
+    font-size: 0.9rem;
+  }
+  form{
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 
-  .galeria {
-    margin-left: 2.75rem;
-    margin-right: 2.75rem;
-    margin-top: 1rem;
+  form ion-label{
+    font-size: 1.2rem;
   }
 
-  .galeria .lightbox img {
-    margin-bottom: 3rem;
-    box-shadow: 0 0.12rem 0.19rem rgba(0,0,0,0.2);
+  .avisoRestriccion{
+    font-size: 1rem;
   }
 
-  .galeria .lightbox img:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  .tituloInicioSesion{
+    font-size: 1.75rem;
+    margin-right: 1.25rem;
   }
 
-  .galeria img {
-    border-radius: 0.5rem;
+  .botonForm ion-button{
+    width:auto;
+    height: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
   }
+
+  .accesoRegistro{
+    font-size:1rem;
+    width:auto;
+    margin-bottom: 1rem;
+  }
+  .accesoRegistro a{
+    color: #5094FF;
+  }
+
 }
