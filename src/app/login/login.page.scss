@@ -11,7 +11,6 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  margin-top: 25%;
 }
 
 .conjuntoInput{
@@ -86,7 +85,7 @@ form ion-input{
     margin-left: 5rem;
   }
 
-  form ion-label{
+  form label{
     font-size: 2.2rem;
   }
 
@@ -96,7 +95,7 @@ form ion-input{
 
   .botonForm ion-button{
     height: 3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-size: 2rem;
   }
 
@@ -135,7 +134,7 @@ form ion-input{
     margin-left: 2rem;
   }
 
-  form ion-label{
+  form label{
     font-size: 1.8rem;
   }
 
@@ -146,7 +145,7 @@ form ion-input{
   .botonForm ion-button{
     width:auto;
     height: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     font-size: 1.6rem;
   }
 
@@ -184,7 +183,7 @@ form ion-input{
     margin-left: 2rem;
   }
 
-  form ion-label{
+  form label{
     font-size: 1.2rem;
   }
 
@@ -199,9 +198,9 @@ form ion-input{
 
   .botonForm ion-button{
     width:auto;
-    height: 3rem;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+
   }
 
   .accesoRegistro{
