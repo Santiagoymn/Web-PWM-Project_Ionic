@@ -14,6 +14,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./register-form.page.scss'],
 })
 export class RegisterFormPage implements OnInit {
+  @Input() usuario!: UsuarioFire;
 
   registerForm: FormGroup;
   user = '';
@@ -26,7 +27,6 @@ export class RegisterFormPage implements OnInit {
   id = -1;
 
   usuarios!: UsuarioFire[];
-  @Input() usuario!: UsuarioFire;
 
   constructor(public fb: FormBuilder, private router: Router, private usersService: UsersService,
               private firebaseAuth: AngularFireAuth) {
@@ -49,14 +49,18 @@ export class RegisterFormPage implements OnInit {
   }
 
   onSubmitRegister(): void {
+    console.log('esto primero ');
+    console.log(this.registerForm.getRawValue());
     this.user = this.registerForm.get('user')?.value;
     this.email = this.registerForm.get('email')?.value;
     this.name = this.registerForm.get('name')?.value;
     this.surname = this.registerForm.get('surname')?.value;
     this.password = this.registerForm.get('password')?.value;
     this.passwordRepeated = this.registerForm.get('passwordRepeated')?.value;
-
+    console.log('esto segundo ');
+    console.log(this.registerForm.getRawValue());
     if (!this.registerForm.valid){
+      console.log(this.registerForm.getRawValue());
       window.alert('Es necesario rellenar todos los campos o el formato de algún campo es incorrecto');
     }
     else{
@@ -73,11 +77,12 @@ export class RegisterFormPage implements OnInit {
           }
         });
         if (this.registrado !== 1) {
+          console.log(this.registerForm.getRawValue());
           this.firebaseAuth.createUserWithEmailAndPassword(this.email, this.password).
           then((userCredential) => {
-            // @ts-ignore
+            console.log(this.registerForm.getRawValue());
             this.usersService.addNewUser(userCredential.user.uid, this.name, this.surname, this.user);
-            this.router.navigate(['/registeredSuccesful']).then(() => {
+            this.router.navigate(['/registered-succesful']).then(() => {
               this.registerForm.reset();
             });
           }).catch((error) => {

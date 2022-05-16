@@ -7,42 +7,42 @@
       <div class="contenedorFormRegistro">
         <h2 class="tituloRegistro">Registro</h2>
 
-        <form id="form" [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()" novalidate>
+        <form id="form" [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
 
-          <ion-label for="user">Usuario</ion-label>
+          <ion-label>Usuario</ion-label>
           <div class="conjuntoInputRegistro">
             <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887" class="iconoR" alt="Usuario"></ion-img>
-            <ion-input type="text" id="user" name="user" formControlName="user" required></ion-input>
+            <ion-input type="text" id="user" name="user" [(ngModel)]="user"></ion-input>
           </div>
 
-          <ion-label for="email">Email</ion-label>
+          <ion-label>Email</ion-label>
           <div class="conjuntoInputRegistro">
             <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Farroba.png?alt=media&token=1d161ac4-11ad-4b31-bc77-fe607324da06" class="iconoR" alt="Email"></ion-img>
-            <ion-input type="email" id="email" name="email" formControlName="email" required></ion-input>
+            <ion-input type="email" id="email" name="email" [(ngModel)]="email" ></ion-input>
           </div>
 
-          <ion-label for="nombre">Nombre</ion-label>
+          <ion-label>Nombre</ion-label>
           <div class="conjuntoInputRegistro">
             <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887" class="iconoR" alt="Nombre"></ion-img>
-            <ion-input type="text" id="nombre" name="nombre" formControlName="name" required></ion-input>
+            <ion-input type="text" id="name" name="name" [(ngModel)]="name"></ion-input>
           </div>
 
-          <ion-label for="apellidos">Apellidos</ion-label>
+          <ion-label>Apellidos</ion-label>
           <div class="conjuntoInputRegistro">
             <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887g" class="iconoR" alt="Apellidos"></ion-img>
-            <ion-input type="text" id="apellidos" name="apellidos" formControlName="surname" required></ion-input>
+            <ion-input type="text" id="surname" name="surname" [(ngModel)]="surname" ></ion-input>
           </div>
 
-          <ion-label for="passwd">Contraseña</ion-label>
+          <ion-label>Contraseña</ion-label>
           <div class="conjuntoInputRegistro">
             <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-contrase%C3%B1a.png?alt=media&token=ff4dc458-37fb-45fa-833c-10e7e41dba6c" class="iconoR" alt="Contraseña"></ion-img>
-            <ion-input type="password" id="passwd" name="passwd" formControlName="password" required></ion-input>
+            <ion-input type="password" id="password" name="password" [(ngModel)]="password"></ion-input>
           </div>
 
-          <label for="repeatPasswd">Repite contraseña</label>
+          <ion-label>Repite contraseña</ion-label>
           <div class="conjuntoInputRegistro">
             <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-contrase%C3%B1a.png?alt=media&token=ff4dc458-37fb-45fa-833c-10e7e41dba6c" class="iconoR" alt="Repetición contraseña"></ion-img>
-            <ion-input type="password" id="repeatPasswd" name="repeatPasswd" formControlName="passwordRepeated" required></ion-input>
+            <ion-input type="password" id="passwordRepeated" name="passwordRepeated" [(ngModel)]="passwordRepeated"></ion-input>
           </div>
 
           <div class="avisoRestriccion" *ngIf="this.registerForm.get('user')?.errors?.['required'] || this.registerForm.get('email')?.errors?.['required'] ||
@@ -56,7 +56,7 @@
           </div>
 
           <div class="botonFormRegistro">
-            <ion-button type="submit" value="Registrarse" id="registro">
+            <ion-button type="submit" id="registro" fill="outline">
               Registrarse
             </ion-button>
           </div>
@@ -64,7 +64,7 @@
         </form>
 
         <p class="accesoRegistro">
-          ¿Ya tienes cuenta? <a routerLink='/login'>Inicia sesión</a>
+          ¿Ya tienes cuenta? <a [routerLink]="['/login']">Inicia sesión</a>
         </p>
       </div>
     </div>
