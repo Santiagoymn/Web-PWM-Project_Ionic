@@ -30,7 +30,7 @@ export class GetterFirebaseService {
   @Input() carrusel!: Carrusel;
   @Input() usuario!: Usuario;
   @Input() actividad!: Actividad;
-  // @ts-ignore
+
   app = initializeApp(environment);
   db = getFirestore(this.app);
 

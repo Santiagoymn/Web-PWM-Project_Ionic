@@ -1,0 +1,94 @@
+/*////////// ACTIVIDADES //////////*/
+.actividades { /* Contenedor de actividades */
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.actividad { /* Contenedor de actividad */
+  position: relative;
+  display: block;
+}
+.imagenActividad {
+  width: 100%;
+  object-fit: cover;
+}
+.centrado{ /* Centrado del nombre de la actividad en la imagen */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.colorFondo{
+  display: inline-block;
+  text-align:center;
+  background: rgb(66, 66, 66);
+}
+
+
+@media (min-width: 960px) {
+  .descripcionCategorias{
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+    display: none;
+  }
+  /*////////// ACTIVIDADES //////////*/
+
+  .actividad { /* Contenedor de actividad */
+    height: 25.8rem;
+    margin-bottom:4rem;
+  }
+  .imagenActividad {
+    height: 25.8rem;
+  }
+  .categoryWrapper{
+    margin-bottom: 10em;
+  }
+}
+
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .descripcionCategorias{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  /*////////// ACTIVIDADES //////////*/
+
+  .actividad { /* Contenedor de actividad */
+    height: 15.8rem;
+    margin-bottom:4rem;
+  }
+  .imagenActividad {
+    height: 15.8rem;
+  }
+  .categoryWrapper{
+    margin-bottom: 8em;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .descripcionCategorias{
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  /*////////// ACTIVIDADES //////////*/
+
+  .actividad { /* Contenedor de actividad */
+    height: 18rem;
+    margin-bottom:4rem;
+  }
+  .imagenActividad {
+    height: 18rem;
+  }
+  .categoryWrapper{
+    margin-bottom: 8em;
+  }
+
+
+}

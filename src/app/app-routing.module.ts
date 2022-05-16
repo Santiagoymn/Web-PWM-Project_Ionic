@@ -19,6 +19,18 @@ const routes: Routes = [
     path: 'register-form',
     loadChildren: () => import('./register-form/register-form.module').then( m => m.RegisterFormPageModule)
   },
+  {
+    path: 'category-page-actividades',
+    loadChildren: () => import('./category-page-actividades/category-page-actividades').then(m => m.ActividadesPageActividadesPageModule)
+  },
+  {
+    path: 'carrusel',
+    loadChildren: () => import('./carrusel/carrusel.module').then( m => m.CarruselPageModule)
+  },
+  {
+    path: 'home-page-categories',
+    loadChildren: () => import('./home-page-categories/home-page-categories.module').then( m => m.HomePageCategoriesPageModule)
+  },
 ];
 
 @NgModule({

@@ -18,17 +18,29 @@ import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import {FooterPageModule} from './footer/footer.module';
 import {LoginPageModule} from './login/login.module';
+import {ActividadesPageActividadesPageModule} from './category-page-actividades/category-page-actividades';
+import {FooterPageModule} from './footer/footer.module';
+import {CarruselPage} from "./carrusel/carrusel.page";
+import {HomePageCategoriesPageModule} from "./home-page-categories/home-page-categories.module";
 
 @NgModule({
-  declarations: [AppComponent],
+    declarations: [AppComponent, CarruselPage],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, RegisterFormPageModule, FooterPageModule, LoginPageModule,
-    AngularFireDatabaseModule,
-    AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment),
-    AngularFireAnalyticsModule,
-    AngularFirestoreModule,
-    AngularFireAuthModule],
+    imports: [
+        BrowserModule,
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        RegisterFormPageModule,
+        ActividadesPageActividadesPageModule,
+        AngularFireDatabaseModule,
+        AngularFireStorageModule,
+        AngularFireModule.initializeApp(environment),
+        FooterPageModule,
+        AngularFireAnalyticsModule,
+        AngularFirestoreModule,
+        AngularFireAuthModule,
+        HomePageCategoriesPageModule
+    ],
   providers: [SQLite, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]

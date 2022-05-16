@@ -9,8 +9,8 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css', '../app.component.css']
+  templateUrl: 'login.page.html',
+  styleUrls: ['./login.page.scss', '../app.component.scss']
 })
 export class LoginPage implements OnInit {
   checkoutForm: FormGroup;
@@ -20,6 +20,7 @@ export class LoginPage implements OnInit {
   acceso = 0;
 
   usuarios!: UsuarioFire[];
+  // eslint-disable-next-line @typescript-eslint/member-ordering
   @Input() usuario!: UsuarioFire;
 
   constructor(public fb: FormBuilder, private usersService: UsersService, private router: Router,

@@ -1,53 +1,42 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-content [scrollEvents]="true">
+    <ion-grid class="container-fluid login">
+      <ion-row>
+        <ion-col size="1"  size-lg="2"></ion-col>
+        <ion-col size="10" size-lg="8">
+          <div class="contenedorForm">
+            <h3 class="tituloInicioSesion">Inicio de Sesión</h3>
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" novalidate>
+              <label for="email"> Email </label>
+              <div class="conjuntoInput">
+                <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Farroba.png?alt=media&token=1d161ac4-11ad-4b31-bc77-fe607324da06" class="icono" alt="Email"></ion-img>
+                <ion-input type="text" id="email" name="email" formControlName="email" required="true"></ion-input>
+              </div>
 
-<ion-content>
+              <label for="passwd">Contraseña</label>
+              <div class="conjuntoInput">
+                <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-contrase%C3%B1a.png?alt=media&token=ff4dc458-37fb-45fa-833c-10e7e41dba6c" class="icono" alt="Contraseña"></ion-img>
+                <ion-input type="password" id="passwd" name="passwd" formControlName="password" required="true"></ion-input>
+              </div>
 
-</ion-content>
+              <div class="avisoRestriccion" *ngIf="this.checkoutForm.get('password')?.errors?.['required'] || this.checkoutForm.get('user')?.errors?.['required']">
+                <div> Todos los campos deben rellenarse</div>
+              </div>
 
-<!--<div class="container-fluid login">
-  <div class="row">
-    <div class="col-1 col-sm-2 col-lg-3">
-    </div>
-    <div class="col-10 col-sm-8 col-lg-6">
-      <div class="contenedorForm">
-        <h3 class="tituloInicioSesion">Inicio de Sesión</h3>
+              <div class="botonForm">
+                <ion-button type="submit" id="inicio">
+                  Iniciar Sesión
+                </ion-button>
+              </div>
 
-        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" novalidate>
-          <label for="email"> Email </label>
-          <div class="conjuntoInput">
-            <img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Farroba.png?alt=media&token=1d161ac4-11ad-4b31-bc77-fe607324da06" class="icono" alt="Email">
-            <input type="text" id="email" name="email" formControlName="email" required >
+            </form>
+            <p class="accesoRegistro">
+              ¿No tienes cuenta? <a routerLink='/register'>Regístrate</a>
+            </p>
           </div>
-
-          <label for="passwd">Contraseña</label>
-          <div class="conjuntoInput">
-            <img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-contrase%C3%B1a.png?alt=media&token=ff4dc458-37fb-45fa-833c-10e7e41dba6c" class="icono" alt="Contraseña">
-            <input type="password" id="passwd" name="passwd" formControlName="password" required >
-          </div>
-
-          <div class="avisoRestriccion" *ngIf="this.checkoutForm.get('password')?.errors?.['required'] || this.checkoutForm.get('user')?.errors?.['required']">
-            <div> Todos los campos deben rellenarse</div>
-          </div>
-
-          <div class="botonForm">
-            <button type="submit" value="Iniciar Sesión" id="inicio">
-              Iniciar Sesión
-            </button>
-          </div>
-
-        </form>
-
-        <p class="accesoRegistro">
-          ¿No tienes cuenta? <a routerLink='/register'>Regístrate</a>
-        </p>
-      </div>
-    </div>
-    <div class="col-1 col-sm-2 col-lg-3">
-    </div>
-  </div>
-</div>
--->
+        </ion-col>
+        <ion-col size="1"  size-lg="2"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-app>
