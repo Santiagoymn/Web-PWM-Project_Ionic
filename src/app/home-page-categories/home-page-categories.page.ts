@@ -6,7 +6,7 @@ import {GetterFirebaseService} from '../serviceGeneral/getter-firebase.service';
 @Component({
   selector: 'app-home-page-categories',
   templateUrl: './home-page-categories.page.html',
-  styleUrls: ['./home-page-categories.page.scss'],
+  styleUrls: ['./home-page-categories.page.scss', '../app.component.scss'],
 })
 export class HomePageCategoriesPage implements OnInit {
 

@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import {HomePageCategoriesPageModule} from '../home-page-categories/home-page-categories.module';
+import {HomePageAboutUsPageModule} from '../home-page-about-us/home-page-about-us.module';
 import {CarruselPage} from '../carrusel/carrusel.page';
 
 
@@ -15,10 +16,8 @@ import {CarruselPage} from '../carrusel/carrusel.page';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    HomePageCategoriesPageModule
-  ],
-  exports: [
-    HomePage
+    HomePageCategoriesPageModule,
+    HomePageAboutUsPageModule
   ],
   declarations: [HomePage, CarruselPage]
 })
