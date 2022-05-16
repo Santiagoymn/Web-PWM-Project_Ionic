@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RegisterFormPageRoutingModule } from './register-form-routing.module';
 
 import { RegisterFormPage } from './register-form.page';
+import {AngularFireDatabase} from '@angular/fire/compat/database';
 
 @NgModule({
   imports: [
@@ -19,6 +20,9 @@ import { RegisterFormPage } from './register-form.page';
   exports: [
     RegisterFormPage
   ],
-  declarations: [RegisterFormPage]
+  declarations: [RegisterFormPage],
+  providers: [
+    AngularFireDatabase,
+  ]
 })
 export class RegisterFormPageModule {}

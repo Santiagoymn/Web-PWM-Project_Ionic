@@ -16,6 +16,8 @@ import {environment} from '../environments/environment';
 import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import {FooterPageModule} from './footer/footer.module';
+import {LoginPageModule} from './login/login.module';
 import {ActividadesPageActividadesPageModule} from './category-page-actividades/category-page-actividades';
 import {FooterPageModule} from './footer/footer.module';
 import {CarruselPage} from "./carrusel/carrusel.page";
@@ -43,18 +45,21 @@ import {HomePageCategoriesPageModule} from "./home-page-categories/home-page-cat
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 })
-export class AppModule {}
+export class AppModule { }
+
 
 /*@NgModule({
   declarations: [
-
+    AppComponent,
+    FooterPage,
+    RegisterFormPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgbModule,
     ReactiveFormsModule,
     FormsModule,
     AngularFireDatabaseModule,
@@ -62,10 +67,10 @@ export class AppModule {}
     AngularFireModule.initializeApp(environment),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
-    AlertModule,
     AngularFireAuthModule
   ],
-  providers: [CookieService],
+  providers: [],
   bootstrap: [AppComponent],
-
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 })*/
+
