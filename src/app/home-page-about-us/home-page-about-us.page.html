@@ -1,0 +1,12 @@
+<article class="apartadoSobreNosotros"  *ngFor="let aboutUs of aboutUs | async">
+  <div class="fotoTextosBoton" >
+    <h2 class="tituloApartadoSobreNosotros"> SOBRE NOSOTROS...</h2>
+    <div class="fotoTexto" >
+      <ion-img class="imagenSobreNosotros" src="{{aboutUs.logo}}" alt="{{aboutUs.alt}}"></ion-img>
+      <p> {{aboutUs.descripcion}}</p>
+    </div>
+    <ion-button routerLink='/aboutUs' type="submit" class="btnSaberMás">
+      Saber más
+    </ion-button>
+  </div>
+</article>

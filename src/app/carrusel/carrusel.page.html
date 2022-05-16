@@ -5,11 +5,14 @@
         <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav (ionSlideDidChange)="slideDidChange(sliderOne,slideWithNav)">
           <ion-slide *ngFor="let s of imagenes">
             <div class="wrapper">
-              <img src="{{s.url}}" alt="{{s.alt}}">
+              <ion-img src="{{s.url}}" alt="{{s.alt}}"></ion-img>
             </div>
           </ion-slide>
         </ion-slides>
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <app-home-page-categories></app-home-page-categories>
+  <app-home-page-about-us></app-home-page-about-us>
 </ion-content>

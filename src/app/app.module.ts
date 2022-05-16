@@ -16,61 +16,40 @@ import {environment} from '../environments/environment';
 import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import {CategoryPageActividadesPageModule} from './category-page-actividades/category-page-actividades';
 import {FooterPageModule} from './footer/footer.module';
-import {LoginPageModule} from './login/login.module';
-import {ActividadesPageActividadesPageModule} from './category-page-actividades/category-page-actividades';
-import {FooterPageModule} from './footer/footer.module';
-import {CarruselPage} from "./carrusel/carrusel.page";
-import {HomePageCategoriesPageModule} from "./home-page-categories/home-page-categories.module";
+import {CarruselPage} from './carrusel/carrusel.page';
+import {HomePageCategoriesPageModule} from './home-page-categories/home-page-categories.module';
+import {HomePageAboutUsPageModule} from './home-page-about-us/home-page-about-us.module';
 
 @NgModule({
-    declarations: [AppComponent, CarruselPage],
+  declarations: [AppComponent, CarruselPage],
   entryComponents: [],
-    imports: [
-        BrowserModule,
-        IonicModule.forRoot(),
-        AppRoutingModule,
-        RegisterFormPageModule,
-        ActividadesPageActividadesPageModule,
-        AngularFireDatabaseModule,
-        AngularFireStorageModule,
-        AngularFireModule.initializeApp(environment),
-        FooterPageModule,
-        AngularFireAnalyticsModule,
-        AngularFirestoreModule,
-        AngularFireAuthModule,
-        HomePageCategoriesPageModule
-    ],
-  providers: [SQLite, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
-})
-export class AppModule { }
-
-
-/*@NgModule({
-  declarations: [
-    AppComponent,
-    FooterPage,
-    RegisterFormPage,
-    LoginPage
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    RegisterFormPageModule,
+    CategoryPageActividadesPageModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment),
+    FooterPageModule,
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HomePageCategoriesPageModule,
+    HomePageAboutUsPageModule
   ],
-  providers: [],
+  providers: [SQLite, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
-})*/
-
+  exports: [
+    CarruselPage
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
+})
+export class AppModule {}

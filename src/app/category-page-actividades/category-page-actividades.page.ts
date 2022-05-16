@@ -19,7 +19,6 @@ export class CategoryPageActividadesPage implements OnInit {
 
   async ngOnInit() {
     // @ts-ignore
-    localStorage.setItem('category', 'Actividades acuáticas');
     this.actividades = await this.getterJsonService.getCategoriaActividades(localStorage.getItem('category'));
 
     this.getterJsonService.getCategorias()

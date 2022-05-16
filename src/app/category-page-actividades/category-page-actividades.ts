@@ -8,6 +8,7 @@ import { ActividadesPageActividadesPageRoutingModule } from './category-page-act
 
 import { CategoryPageActividadesPage } from './category-page-actividades.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -20,4 +21,4 @@ import { CategoryPageActividadesPage } from './category-page-actividades.page';
   ],
   declarations: [CategoryPageActividadesPage]
 })
-export class ActividadesPageActividadesPageModule {}
+export class CategoryPageActividadesPageModule {}

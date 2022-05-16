@@ -1,0 +1,183 @@
+/*////////// APARTADO DE SOBRE NOSOTROS //////////*/
+.apartadoSobreNosotros{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #C4C4C4;
+  display:flex;
+  flex-direction: column;
+}
+
+.tituloApartadoSobreNosotros{
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.textoapartadoSobreNosotros{
+  font-family: "Helvetica", serif;
+  font-style: normal;
+  font-weight: normal;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+.btnSaberMás{
+  position: relative;
+  font-family: Helvetica, serif;
+  text-align: center;
+  background: #CEE0FC;
+  align-self: center;
+}
+
+/*////////// MEDIA QUERY //////////*/
+/*
+  ##Device = Desktops
+  ##Screen = 960px to higher resolution desktops
+*/
+
+@media (min-width: 960px) {
+  /*////////// APARTADO DE SOBRE NOSOTROS //////////*/
+  .apartadoSobreNosotros{
+    min-height: 43.75rem;
+    height: auto;
+    margin-top: 18rem;
+    margin-bottom: 10rem;
+  }
+
+  .imagenSobreNosotros{
+    width: 30rem;
+    height: 28rem;
+    margin-right: 3rem;
+    margin-bottom:2rem;
+    float:left;
+    vertical-align: center;
+    align-self: center;
+  }
+  .tituloApartadoSobreNosotros{
+    width: auto;
+    margin-top:5rem;
+  }
+
+  .fotoTextosBoton{
+    display:flex;
+    flex-direction: column;
+    align-content:center;
+    justify-content: center;
+  }
+
+  .fotoTexto {
+    margin-right: 6.25rem;
+    margin-left: 6.25rem;
+  }
+
+  .btnSaberMás{
+    width: 13.88rem;
+    height: 4.69rem;
+    font-size: 2.25rem;
+    border-radius: 1rem;
+    margin-top: 2.5rem;
+    clear: none;
+    margin-bottom: 5rem;
+  }
+}
+
+/*
+  ##Device = Tablets
+  ##Screen = 640px to 960px
+*/
+
+@media (min-width: 640px) and (max-width: 959px) {
+  /*////////// APARTADO DE SOBRE NOSOTROS //////////*/
+  .apartadoSobreNosotros{
+    min-height: 43.75rem;
+    height: auto;
+    margin-top: 12rem;
+    margin-bottom: 10rem;
+  }
+
+  .imagenSobreNosotros{
+    width: 25rem;
+    height: 23rem;
+    margin-right: 3rem;
+    margin-bottom:2rem;
+    float:left;
+    vertical-align: center;
+    align-self: center;
+
+  }
+  .tituloApartadoSobreNosotros{
+    width: auto;
+  }
+
+  .fotoTextosBoton{
+    display:flex;
+    flex-direction: column;
+    align-content:center;
+    justify-content: center;
+  }
+
+  .fotoTexto {
+    margin-right: 3.25rem;
+    margin-left: 3.25rem;
+  }
+
+  .btnSaberMás{
+    width: 12.88rem;
+    height: 4.5rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    margin-top: 2.5rem;
+    clear: none;
+    margin-bottom: 5rem;
+  }
+}
+
+/*
+  ##Device = Mobiles
+  ##Screen = 640px to minimal resolution
+*/
+
+@media (max-width: 640px) {
+  /*////////// APARTADO DE SOBRE NOSOTROS //////////*/
+  .apartadoSobreNosotros{
+    min-height: 43.75rem;
+    height: auto;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+  }
+
+  .imagenSobreNosotros{
+    width: 20rem;
+    height: 18rem;
+    margin-bottom:2rem;
+    margin-top:1rem;
+    vertical-align: center;
+    align-self: center;
+    justify-content: center;
+  }
+  .tituloApartadoSobreNosotros{
+    width: 25rem;
+  }
+
+  .fotoTexto{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .fotoTextosBoton{
+    display:flex;
+    flex-direction: column;
+    align-content:center;
+    justify-content: center;
+  }
+
+
+  .btnSaberMás{
+    width: 10.88rem;
+    height: 3.69rem;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+  }
+}
