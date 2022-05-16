@@ -1,0 +1,160 @@
+/*////////// GENERAL //////////*/
+html {
+  font-size: 100%;
+}
+
+/*////////// TIPOGRAFÍA //////////*/
+h1{ /*h1 es el titulo del header*/
+  font-family: "Helvetica", serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+h2{ /*h2 es el titulo de cada página*/
+  font-family: "Helvetica", serif;
+  font-weight: normal;
+  position: relative;
+}
+h3{ /*h3 subtitulos dentro de cada página*/
+  font-family: "Helvetica", serif;
+  text-align: center;
+}
+h4{ /*h4 subtitulos más pequeño dentro de cada página*/
+  position: relative;
+  font-family: "Helvetica", serif;
+  font-weight: bold;
+}
+p{ /*texto común*/
+  font-family: "Helvetica", serif;
+  text-align: justify;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+span{
+  font-family: "Helvetica", serif;
+  color: #FFFFFF;
+}
+
+.nombreActividadImagen{ /*título de nombre de actividad en Category Page y Activity Page*/
+  position: relative;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+/*////////// MEDIA QUERY //////////*/
+/*
+  ##Device = Desktops
+  ##Screen = 960px to higher resolution desktops
+*/
+
+@media (min-width: 960px) {
+
+  /*////////// TIPOGRAFÍA //////////*/
+  h1{ /*h1 es el titulo del header*/
+    font-size: 4.5em;
+  }
+  h2{ /*h2 es el titulo de cada página*/
+    font-size: 3.8em;
+    line-height: 5.25rem;
+    top: 0;
+    margin-left: 6.25rem;
+    margin-bottom: 1em;
+  }
+  h3{ /*h3 subtitulos dentro de cada página*/
+    font-size: 4rem;
+    line-height: 4.69rem;
+    margin-top: 2rem;
+  }
+  h4{ /*h4 subtitulos más pequeño dentro de cada página*/
+    width: 19.875rem;
+    height: 3.3125rem;
+    font-size: 3rem;
+  }
+  p{ /*texto común*/
+    font-size: 1.875rem;
+    line-height: 2.63rem;
+  }
+  .nombreActividadImagen{ /*título de nombre de actividad en Category Page y Activity Page*/
+    font-size: 4rem;
+    line-height: 4rem;
+    width: auto;
+    text-align: center;
+  }
+}
+
+/*
+  ##Device = Tablets
+  ##Screen = 640px to 960px
+*/
+
+@media (min-width: 640px) and (max-width: 960px) {
+  /*////////// TIPOGRAFÍA //////////*/
+  h1{ /*h1 es el titulo del header*/
+    font-size: 4.5em;
+    line-height: 5.25rem;
+  }
+  h2{ /*h2 es el titulo de cada página*/
+    font-size: 2.5em;
+    line-height: 4rem;
+    top: 0;
+    width:50rem;
+    margin-left: 2rem;
+  }
+  h3{ /*h3 subtitulos dentro de cada página*/
+    font-size: 2.25em;
+    line-height: 2.69rem;
+  }
+  h4{ /*h4 subtitulos más pequeño dentro de cada página*/
+    width: 19.875rem;
+    height: 3.3125rem;
+    font-size: 1rem;
+  }
+  p{ /*texto común*/
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+  .nombreActividadImagen{ /*título de nombre de actividad en Category Page y Activity Page*/
+    font-size: 3rem;
+  }
+}
+
+/*
+  ##Device = Mobiles
+  ##Screen = 640px to minimal resolution
+*/
+
+@media (max-width: 640px) {
+  /*////////// TIPOGRAFÍA //////////*/
+  h1{ /*h1 es el titulo del header*/
+    font-size: 4em;
+    line-height: 5.25rem;
+  }
+  h2{ /*h2 es el titulo de cada página*/
+    font-size: 1.6em;
+    top: 0;
+    margin-left: 2rem;
+  }
+  h3{ /*h3 subtitulos dentro de cada página*/
+    font-size: 1.4em;
+    line-height: 2rem;
+  }
+  h4{ /*h4 subtitulos más pequeño dentro de cada página*/
+    width: 19.875rem;
+    height: 3.3125rem;
+    font-size: 3em;
+  }
+  p{ /*texto común*/
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-right: 1.75rem;
+    margin-left: 1.75rem;
+  }
+  .nombreActividadImagen{ /*título de nombre de actividad en Category Page y Activity Page*/
+    font-size: 1.75em;
+    text-align:center;
+  }
+}
+
+
+
