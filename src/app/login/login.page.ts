@@ -5,6 +5,7 @@ import {UsersService} from '../serviceUsers/users.service';
 import {tap} from 'rxjs';
 import {Router} from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import {NavController} from '@ionic/angular';
 
 
 @Component({
@@ -13,18 +14,16 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./login.page.scss', '../app.component.scss']
 })
 export class LoginPage implements OnInit {
-  checkoutForm: FormGroup;
-
-  email = '';
-  password = '';
-  acceso = 0;
-
-  usuarios!: UsuarioFire[];
-  // eslint-disable-next-line @typescript-eslint/member-ordering
   @Input() usuario!: UsuarioFire;
 
+  checkoutForm: FormGroup;
+  email = '';
+  password = '';
+  usuarios!: UsuarioFire[];
+
   constructor(public fb: FormBuilder, private usersService: UsersService, private router: Router,
-              private firebaseAuth: AngularFireAuth) {
+              private firebaseAuth: AngularFireAuth,
+              private navCtrl: NavController) {
     this.checkoutForm = this.fb.group({
       email: ['', [Validators.required]],
       password: ['', [Validators.required]]
@@ -49,7 +48,7 @@ export class LoginPage implements OnInit {
         .signInWithEmailAndPassword(this.email, this.password)
         .then((result) => {
           alert('Ha iniciado sesión correctamente');
-          this.router.navigate(['']).then(() => {
+          this.navCtrl.navigateForward('/home').then(() => {
             sessionStorage.setItem('logged', 'true');
             this.checkoutForm.reset();
           });
