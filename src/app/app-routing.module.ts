@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'category-page-actividades',
-    loadChildren: () => import('./category-page-actividades/category-page-actividades').then(m => m.ActividadesPageActividadesPageModule)
+    loadChildren: () => import('./category-page-actividades/category-page-actividades').then(m => m.CategoryPageActividadesPageModule)
   },
   {
     path: 'carrusel',
@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'home-page-categories',
     loadChildren: () => import('./home-page-categories/home-page-categories.module').then( m => m.HomePageCategoriesPageModule)
+  },
+  {
+    path: 'home-page-about-us',
+    loadChildren: () => import('./home-page-about-us/home-page-about-us.module').then( m => m.HomePageAboutUsPageModule)
   },
 ];
 
