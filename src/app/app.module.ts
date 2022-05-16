@@ -21,6 +21,7 @@ import {FooterPageModule} from './footer/footer.module';
 import {CarruselPage} from './carrusel/carrusel.page';
 import {HomePageCategoriesPageModule} from './home-page-categories/home-page-categories.module';
 import {HomePageAboutUsPageModule} from './home-page-about-us/home-page-about-us.module';
+import {HomePageModule} from "./home/home.module";
 
 @NgModule({
   declarations: [AppComponent, CarruselPage],
@@ -43,7 +44,8 @@ import {HomePageAboutUsPageModule} from './home-page-about-us/home-page-about-us
     AngularFirestoreModule,
     AngularFireAuthModule,
     HomePageCategoriesPageModule,
-    HomePageAboutUsPageModule
+    HomePageAboutUsPageModule,
+    HomePageModule
   ],
   providers: [SQLite, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
