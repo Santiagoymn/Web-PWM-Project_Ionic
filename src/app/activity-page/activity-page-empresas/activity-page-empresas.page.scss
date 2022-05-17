@@ -1,0 +1,259 @@
+/*////////// EMPRESAS //////////*/
+.localizacionCabeceraEmpresas{
+  position: relative;
+  display: block;
+  width:auto;
+}
+.tituloEmpresas{ /* Alineamiento del título de cabeceras */
+  text-align: left;
+}
+.nombreEmpresaOrganizadora{
+  position: relative;
+  font-family: 'Helvetica',serif;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+}
+.empresa{
+  justify-content: center;
+  width: auto;
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+}
+/*////////// Imágenes//////////*/
+.informacionEspecifica img{
+  position: relative;
+  display:inline-block;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+/*////////// Datos de la empresa//////////*/
+.localizacionInformacion{ /* Localización de la información de las empresas */
+  display:flex;
+  flex-direction: column;
+}
+.informacionEspecifica{
+  font-family: "Helvetica", serif;
+  display: inline-block;
+  vertical-align: middle;
+}
+.iconoDato{
+  width: auto;
+  position: relative;
+  display:inline-flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+
+
+
+/*////////// MEDIA QUERY //////////*/
+/*
+  ##Device = Desktops
+  ##Screen = 960px to higher resolution desktops
+*/
+
+@media (min-width: 960px) {
+  /*////////// EMPRESAS //////////*/
+  .localizacionCabeceraEmpresas{
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+  }
+  .nombreEmpresaOrganizadora{
+    font-size: 2rem;
+    line-height: 6rem;
+  }
+  .iconoDato{
+    margin-left: 2rem;
+    line-height: 5rem;
+  }
+  /*////////// Imágenes//////////*/
+  .imagenPin { /* Imagen del pin en la cabecera de empresas */
+    width: 1.6875rem;
+    height: 4.6875rem;
+    margin-right:2rem;
+  }
+  .imagenEuro{
+    width: 2.6875rem;
+    height: 3.1875rem;
+    margin-right:1rem;
+  }
+  .imagenTelefono{
+    width: 3.6875rem;
+    height: 4rem;
+  }
+  .imagenWeb{
+    width: 4.6875rem;
+    height: 4.3875rem;
+    margin-right:0.5rem;
+  }
+
+  /*////////// Datos de la empresa//////////*/
+  .empresa{
+    position: relative;
+    margin-right: 6.25rem;
+    margin-left: 6.25rem;
+  }
+  .localizacionInformacion{ /* Localización de la información de las empresas */
+    position: relative;
+    margin-top: 3rem;
+    text-align: center;
+
+  }
+  .informacionEmpresas{ /* Información de las empresas*/
+    font-size: 1.875rem;
+    position: relative;
+    justify-content: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .informacionEspecifica{
+    font-size: 2rem;
+    line-height: 1.75rem;
+    color: black;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 5rem;
+  }
+}
+
+/*
+  ##Device = Tablets
+  ##Screen = 640px to 960px
+*/
+
+@media (min-width: 640px) and (max-width: 960px) {
+  /*////////// EMPRESAS //////////*/
+  .localizacionCabeceraEmpresas{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .nombreEmpresaOrganizadora{
+    font-size: 2.4rem;
+    line-height: 6rem;
+  }
+  .iconoDato{
+    margin-left: 3rem;
+    line-height: 4rem;
+  }
+  /*////////// Imágenes//////////*/
+  .imagenPin {
+    width: 1.2875rem;
+    height: 3.6875rem;
+    margin-right:1rem;
+  }
+  .imagenEuro{
+    width: 2rem;
+    height: 2.5875rem;
+    margin-right:1rem;
+  }
+  .imagenTelefono{
+    width: 3rem;
+    height: 3rem;
+  }
+  .imagenWeb{
+    width: 3.6875rem;
+    height: 3.3875rem;
+  }
+
+  /*////////// Datos de la empresa//////////*/
+  .empresa{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .localizacionInformacion{ /* Localización de la información de las empresas */
+    position: relative;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .informacionEmpresas{ /* Información de las empresas*/
+    font-size: 1.875rem;
+    margin-left: 10rem;
+  }
+  .informacionEspecifica{
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    color: black;
+    margin-bottom: 3rem;
+  }
+}
+
+/*
+  ##Device = Mobiles
+  ##Screen = 640px to minimal resolution
+*/
+
+@media (max-width: 640px) {
+  /*////////// EMPRESAS //////////*/
+  .localizacionCabeceraEmpresas{
+    margin-left: 1.75rem;
+    width: auto;
+  }
+  .nombreEmpresaOrganizadora{
+    font-size: 1.5em;
+    line-height: 6rem;
+  }
+  .iconoDato{
+    line-height: 4rem;
+    margin-left: 2rem;
+  }
+  /*////////// Imágenes//////////*/
+  .imagenPin {
+    width: 1.2875rem;
+    height: 3.6875rem;
+    margin-right: 0.5rem;
+  }
+
+  .imagenEuro{
+    width: 2rem;
+    height: 2.5875rem;
+    margin-right: 1rem;
+  }
+
+  .imagenTelefono{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .imagenWeb{
+    width: 3.6875rem;
+    height: 3.3875rem;
+    margin-right: 0.5rem;
+  }
+
+  /*////////// Datos de la empresa//////////*/
+  .empresa{
+    margin-left:1.75rem;
+    margin-right:1.75rem;
+  }
+  .localizacionInformacion{ /* Localización de la información de las empresas */
+    position: relative;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .informacionEmpresas{ /* Información de las empresas*/
+    font-size: 1.75rem;
+    margin-left: 10rem;
+  }
+  .informacionEspecifica{
+    display:flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 6rem;
+    color: black;
+
+  }
+
+}
+
+
