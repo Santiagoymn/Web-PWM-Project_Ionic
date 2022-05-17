@@ -43,6 +43,12 @@ const routes: Routes = [
     path: 'registered-succesful',
     loadChildren: () => import('./register-message/register-message.module').then( m => m.RegisterMessagePageModule)
   },
+  {
+    path: 'actividad',
+    loadChildren: () => import('./activity-page-information/activity-page-information.module')
+      .then( m => m.ActivityPageInformationPageModule)
+  },
+
 ];
 
 @NgModule({
