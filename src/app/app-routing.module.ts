@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'home-page-about-us',
     loadChildren: () => import('./home-page-about-us/home-page-about-us.module').then( m => m.HomePageAboutUsPageModule)
   },
+  {
+    path: 'header',
+    loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
+  },
 ];
 
 @NgModule({

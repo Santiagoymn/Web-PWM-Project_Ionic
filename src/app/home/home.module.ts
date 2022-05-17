@@ -8,17 +8,19 @@ import { HomePageRoutingModule } from './home-routing.module';
 import {HomePageCategoriesPageModule} from '../home-page-categories/home-page-categories.module';
 import {HomePageAboutUsPageModule} from '../home-page-about-us/home-page-about-us.module';
 import {CarruselPage} from '../carrusel/carrusel.page';
+import {HeaderPageModule} from "../header/header.module";
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule,
-    HomePageCategoriesPageModule,
-    HomePageAboutUsPageModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule,
+        HomePageCategoriesPageModule,
+        HomePageAboutUsPageModule,
+        HeaderPageModule
+    ],
   declarations: [HomePage, CarruselPage]
 })
 export class HomePageModule {}

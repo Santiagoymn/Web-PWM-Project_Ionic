@@ -1,0 +1,115 @@
+<ion-header>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <a routerLink="/home"><img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/logos%2FLogo.png?alt=media&token=ba7c61d3-ccc0-4690-92bc-45044ffee700" class="logo" alt="Página inicial"></a>
+  <h1 class="tituloPagina">CONOCE GC</h1>
+
+  <div class="lineaHeader">
+
+    <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2FtresRayas.png?alt=media&token=56735219-f39f-45dd-8fa6-c042cd011409" class="tresRayas" alt="Tres rayas" (click)="toggleLineHeaderOculto()"></ion-img>
+
+    <a routerLink="login" *ngIf="getLogged()">
+      <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887" class="iconoLogueado" alt='Icono logueado'></ion-img>
+    </a>
+
+    <div class='loginRegister' *ngIf="!getLogged()">
+      <a routerLink="login">Login</a>/<a routerLink="/register-form">Register</a>
+    </div>
+
+    <div class="lineaHeaderOculto" id="lineHeader">
+      <a href="index.html"><img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/logos%2FLogo.png?alt=media&token=ba7c61d3-ccc0-4690-92bc-45044ffee700" class="logo2" alt="Página inicial"></a>
+
+      <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2FtresRayas.png?alt=media&token=56735219-f39f-45dd-8fa6-c042cd011409" class="tresRayas2" alt="Tres rayas" (click)="closeTresRayas()"></ion-img>
+
+      <div class="banderasMovil">
+        <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fspain-flag.png?alt=media&token=7003bfba-5afd-4fe1-bc30-21356214976a" class="banderaPrincipal" alt="Español"></ion-img></p>
+        <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fbritain-flag.png?alt=media&token=3017b273-2e13-4b84-b77c-118898bb5bf5" class="banderaPrincipal" alt="English"></ion-img></p>
+        <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Ffrance-flag.svg?alt=media&token=bf6a7272-63f2-4285-b4dc-7a461bc3936a" class="banderaPrincipal" alt="Français"></ion-img></p>
+        <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fgermany-flag.png?alt=media&token=cd0dcf1e-160e-447a-916a-d69e75f3550c" class="banderaPrincipal" alt="Deutsch"></ion-img></p>
+      </div>
+
+      <a routerLink="login" *ngIf="getLogged()">
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887" class="iconoLogueadoMovil" alt='Icono logueado'></ion-img>
+      </a>
+
+      <div class='loginRegisterMovil' *ngIf="!getLogged()">
+        <a routerLink="login">Login</a>/<a routerLink="/register-form">Register</a>
+      </div>
+
+      <div class="rectanguloSeparacionDropdown"></div>
+
+      <div id="menu">
+        <ul>
+          <li>
+            <a class="textoDropDown">Categorias</a>
+            <ul class="submenuCategorias" id="subMenu">
+              <div *ngFor="let categoria of categorias">
+                <li (click)="puestaVariableLocal(categoria.titulo)">
+                  <a routerLink="/category-page-actividades">
+                    <p class="fuenteCategorias">{{categoria.titulo}}</p>
+                  </a>
+                </li>
+              </div>
+            </ul>
+            <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Fmas.png?alt=media&token=d4094d93-7fbd-4d65-af28-3909884e72a8" class="simboloMas" alt="Simbolo más" (click)="showSubMenu()" id="mas"></ion-img>
+            <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Fmenos.png?alt=media&token=1e38e7f6-bff6-4263-b4bf-da48e76efdd1" class="simboloMenos" alt="simbolo menos" (click)="hideSubMenu()" id="menos"></ion-img>
+            <div class="rectanguloSeparacionDropdown"></div>
+          </li>
+          <li>
+            <a routerLink="agenda" class="textoDropDown">
+              Agenda
+            </a>
+            <div class="rectanguloSeparacionDropdown"></div>
+          </li>
+          <li>
+            <a routerLink="galeria" class="textoDropDown">
+              Galeria
+            </a>
+            <div class="rectanguloSeparacionDropdown"></div>
+          </li>
+          <li>
+            <a routerLink="conoceGC" class="textoDropDown">
+              Conoce Gran Canaria
+            </a>
+            <div class="rectanguloSeparacionDropdown"></div>
+          </li>
+          <li>
+            <a routerLink="aboutUs" class="textoDropDown">
+              Sobre Nosotros
+            </a>
+            <div class="rectanguloSeparacionDropdown"></div>
+          </li>
+          <li>
+            <div ngbDropdown class="d-inline-block botonBanderasDropDown" placement="bottom-right">
+              <ion-button type="button" class="btn botonBanderas" id="dropdownBasic1" ngbDropdownToggle>
+                <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fspain-flag.png?alt=media&token=7003bfba-5afd-4fe1-bc30-21356214976a" class="banderaPrincipalActual" alt="Español"></ion-img>
+              </ion-button>
+              <div aria-labelledby="dropdownBasic1" ngbDropdownMenu class="dropdown-menu">
+                <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fspain-flag.png?alt=media&token=7003bfba-5afd-4fe1-bc30-21356214976a" class="banderaPrincipal" alt="Español"></ion-img></p>
+                <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fbritain-flag.png?alt=media&token=3017b273-2e13-4b84-b77c-118898bb5bf5" class="banderaPrincipal" alt="English"></ion-img></p>
+                <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Ffrance-flag.svg?alt=media&token=bf6a7272-63f2-4285-b4dc-7a461bc3936a" class="banderaPrincipal" alt="Français"></ion-img></p>
+                <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fgermany-flag.png?alt=media&token=cd0dcf1e-160e-447a-916a-d69e75f3550c" class="banderaPrincipal" alt="Deutsch"></ion-img></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="640 < width && width < 960" ngbDropdown class="d-inline-block botonBanderasDropLeft" placement="left">
+        <ion-button type="button" class="btn btn-tablet" id="dropdownBasic" ngbDropdownToggle>
+          <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fspain-flag.png?alt=media&token=7003bfba-5afd-4fe1-bc30-21356214976a" class="banderaPrincipal" alt="Español"></ion-img>
+        </ion-button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic" class="dropdown-menu">
+          <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fgermany-flag.png?alt=media&token=cd0dcf1e-160e-447a-916a-d69e75f3550c" class="banderaPrincipal" alt="Deutsch"></ion-img>
+          <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Ffrance-flag.svg?alt=media&token=bf6a7272-63f2-4285-b4dc-7a461bc3936a" class="banderaPrincipal" alt="Français"></ion-img>
+          <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fbritain-flag.png?alt=media&token=3017b273-2e13-4b84-b77c-118898bb5bf5" class="banderaPrincipal" alt="English"></ion-img>
+          <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fspain-flag.png?alt=media&token=7003bfba-5afd-4fe1-bc30-21356214976a" class="banderaPrincipal" alt="Español"></ion-img>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rectanguloAzul"></div>
+</ion-header>
+
+
