@@ -23,4 +23,12 @@ export class ActivityPageInformationPage implements OnInit {
   actividadClicada(){
     return  localStorage.getItem('activity');
   }
+
+  checkBoxClick(e){
+    if(e.currentTarget.checked){ // Usuario añade actividad a favs
+
+    }else{ // Usuario elimina actividad a favs
+
+    }
+  }
 }
