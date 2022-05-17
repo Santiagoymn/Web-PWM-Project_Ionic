@@ -16,45 +16,100 @@ footer{
   display: flex;
 }
 
+
 /*////Texto////*/
 .datoContacto{
   position: relative;
   vertical-align: middle;
   text-align: center;
   color: #FFFFFF;
-  font-size: 1.15rem;
   justify-content: center;
 }
 .copyright{
   position: relative;
   text-align: right;
   display: block;
-  height: 0.78rem;
-  bottom: -4rem;
-  margin-right: 1rem;
-  font-size: 1.15rem;
-  line-height: 1rem;
 }
 
 /*////Imágenes////*/
+.datoContacto ion-img {
+  position: relative;
+}
+.redesSociales{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.imagenInstagram{
+  position: relative;
+}
+.imagenFacebook{
+  position: relative;
+}
+
+.imagenYouTube{
+  position: relative;
+}
+
+footer{
+  height: 18rem;
+}
+
+.divFooter{
+  top: 2rem;
+}
+
+
+
+
+
+/*/////////// MEDIA QUERY ///////////*/
+/*
+  ##Device = Desktops
+  ##Screen = 960px to higher resolution desktops
+*/
+@media (min-width: 960px) {
+  /*////////// FOOTER //////////*/
+  footer{
+    height: 28rem;
+  }
+
+  .divFooter{
+    top: 3rem;
+  }
+  .datoContacto{
+    line-height: 6.25rem;
+  }
+
+  /*////Texto////*/
+  .datoContacto {
+    font-size: 1.15rem;
+    line-height: 2.1875rem;
+  }
+  .copyright{
+    height: 0.78rem;
+    bottom: -4rem;
+    margin-right: 1rem;
+    font-size: 1.15rem;
+    line-height: 1rem;
+  }
+
+  /*////Imágenes////*/
   .datoContacto ion-img {
-    position: relative;
     margin-right: 1rem;
   }
   .redesSociales{
-    position: relative;
     bottom: -2rem;
     display: flex;
     justify-content: center;
   }
 
   .imagenInstagram{
-    position: relative;
     width: 1.8rem;
     height: 1.8rem;
   }
   .imagenFacebook{
-    position: relative;
     width: 1.95rem;
     height: 1.95rem;
     margin-left: 1.2rem;
@@ -62,19 +117,9 @@ footer{
   }
 
   .imagenYouTube{
-    position: relative;
     width: 2.2rem;
     height: 1.6em;
   }
-  footer{
-    height: 18rem;
-  }
-
-  .divFooter{
-    top: 2rem;
-  }
-
-  /*////Imágenes////*/
   .datoContacto ion-img{
     width: 2.3rem;
     height: 2.3rem;
@@ -89,7 +134,138 @@ footer{
   #separacion{
     margin-bottom: 2rem;
   }
+}
+
+/*
+  ##Device = Tablets
+  ##Screen = 640px to 960px
+*/
+@media (min-width: 640px) and (max-width: 960px) {
+  /*////////// FOOTER //////////*/
+  footer{
+    height: 25rem;
+  }
+
+  .divFooter{
+    top: 3rem;
+  }
+
+  /*////Texto////*/
+  .datoContacto{
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  .copyright{
+    height: 0.9rem;
+    bottom: -5rem;
+    margin-right: 0.9rem;
+
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  /*////Imágenes////*/
+  .datoContacto ion-img{
+    width: 3.5rem;
+    height: 3.2rem;
+    margin-right: 1rem;
+    top: 0.56rem;
+  }
+  .redesSociales{
+    bottom: -3rem;
+  }
+  .imagenInstagram{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .imagenFacebook{
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-left: 2.3rem;
+    margin-right: 2.3rem;
+  }
+  .imagenYouTube{
+    width: 3.6rem;
+    height: 2.3rem;
+  }
+
+  .localizacionImagenCorreo{
+    margin-top: -1.5rem;
+  }
 
   .localizacionImagenTelefono{
+    margin-top: -0.8rem;
   }
+
+  #imagenTelefono{
+    width: 3.9rem;
+    height: 3.5rem;
+  }
+}
+
+/*
+  ##Device = Mobiles
+  ##Screen = 640px to minimal resolution
+*/
+@media (max-width: 640px) {
+  /*////////// FOOTER //////////*/
+  footer{
+    height: 18rem;
+  }
+
+  .divFooter{
+    top: 2rem;
+  }
+
+  /*////Texto////*/
+  .datoContacto{
+    font-size: 1.15rem;
+  }
+  .copyright{
+    height: 0.78rem;
+    bottom: -4rem;
+    margin-right: 1rem;
+    font-size: 1.15rem;
+    line-height: 1rem;
+  }
+
+  /*////Imágenes////*/
+  .datoContacto ion-img{
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-right: 0.7rem;
+    top: 0.9rem;
+  }
+  .redesSociales{
+    bottom: -2rem;
+  }
+  .imagenInstagram{
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .imagenFacebook{
+    width: 1.95rem;
+    height: 1.95rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+  }
+  .imagenYouTube{
+    width: 2.2rem;
+    height: 1.2em;
+  }
+
+  #imagenTelefono{
+    width: 2.5rem;
+    height: 2.8rem;
+  }
+
+  #separacion{
+    margin-bottom: 2rem;
+  }
+
+  .localizacionImagenTelefono{
+    margin-top: -1.3rem;
+  }
+}
+
 

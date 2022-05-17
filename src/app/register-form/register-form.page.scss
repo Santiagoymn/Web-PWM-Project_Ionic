@@ -6,9 +6,6 @@
   height: auto;
   justify-content: center;
   min-height: 100vh;
-  padding: 5rem;
-  background-size: 100% 100%;
-  margin-bottom: -5rem;
   color: black;
 }
 .contenedorFormRegistro{
@@ -25,40 +22,25 @@
   font-size: 0.9rem;
   color: black;
 }
-
 .tituloRegistro{
   width:auto;
   align-self: center;
   margin-left:0;
-  font-size: 1.75rem;
-}
-
-.avisoRestriccion{
-  font-size: 1rem;
 }
 
 .iconoR{
   position: relative;
-  margin-top: 0.9rem;
-  height: 1.8rem;
-  width: 2rem;
-  bottom: 0.4rem;
-  margin-right: 0.89rem;
 }
 
 form{
   text-align: left;
-  margin-right: 2rem;
-  margin-left: 2rem;
 }
 
 form ion-label{
-  font-size: 1.2rem;
   color: black;
 }
 
 form ion-input{
-  margin-bottom: 3rem;
   border: 0;
   border-bottom: 2px solid #f0f0f0;
   width: 100%;
@@ -80,29 +62,190 @@ ion-input:focus {
   border-radius: 10%;
   border: none;
   width: auto;
-  margin-top: 2rem;
-  height: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
   background: #CEE0FC;
 }
 
 .accesoRegistro{
   align-self: center;
-  font-size:1rem;
-  width:15rem;
-  margin-bottom: 1rem;
-  line-height: 2rem;
   text-align: center;
   color: black;
 }
 .accesoRegistro a{
   text-decoration: none;
-  color: #5094FF;
-}
-.container-fluid{
-  background-color: blue;
+  color: black;
 }
 .app-footer{
   position:relative;
+}
+
+
+/*/////////// MEDIA QUERY ///////////*/
+/*
+  ##Device = Desktops
+  ##Screen = 960px to higher resolution desktops
+*/
+@media (min-width: 960px){
+  /*////////// CUADRO REGISTRO //////////*/
+  .register{
+    padding: 5rem;
+    background-size: 100% 100%;
+    margin-bottom: -5rem;
+  }
+  .iconoR{
+    margin-top: 0.9rem;
+    height: 1.8rem;
+    width: 2rem;
+    bottom: 0.4rem;
+    margin-right: 0.89rem;
+  }
+
+  .tituloRegistro{
+    font-size: 1.75rem;
+  }
+
+  .conjuntoInputRegistro ion-input{
+    font-size: 0.9rem;
+  }
+
+  form{
+    margin-right: 5rem;
+    margin-left: 5rem;
+  }
+
+  form ion-label{
+    font-size: 1.2rem;
+  }
+
+  .avisoRestriccion{
+    font-size: 1rem;
+  }
+
+  .botonFormRegistro ion-button{
+    margin-top: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .accesoRegistro{
+    font-size:1rem;
+    width:15rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    color: black;
+  }
+  .accesoRegistro a:hover{
+    color: #5094FF;
+  }
+}
+
+/*
+  ##Device = Tablets
+  ##Screen = 640px to 960px
+*/
+@media (min-width: 640px) and (max-width: 960px) {
+  /*////////// CUADRO REGISTRO //////////*/
+  .register{
+    padding: 8rem;
+    background-size: 100% 100%;
+    margin-bottom: -25rem;
+  }
+  .iconoR{
+    margin-top: 1.5rem;
+    height: 2.5rem;
+    width: 2.8rem;
+    bottom: 1.3rem;
+    margin-right: 1.3rem;
+  }
+  .conjuntoInputRegistro ion-input{
+    font-size: 1.6rem;
+  }
+  form{
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  form ion-label{
+    font-size: 1.8rem;
+  }
+
+  .avisoRestriccion{
+    font-size: 1.2rem;
+  }
+
+  .botonFormRegistro ion-button{
+    width:auto;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    margin-top:2rem;
+  }
+
+  .accesoRegistro{
+    font-size:1.4rem;
+    width:auto;
+    margin-bottom: 1rem;
+  }
+  .accesoRegistro a{
+    color: #5094FF;
+  }
+}
+
+/*
+  ##Device = Mobiles
+  ##Screen = 640px to minimal resolution
+*/
+@media (max-width: 640px) {
+  /*////////// CUADRO REGISTRO //////////*/
+  .register{
+    padding: 2rem;
+    background-size: 100% 100%;
+    margin-bottom: -5rem;
+  }
+  .iconoR{
+    margin-top: 0.9rem;
+    height: 1.8rem;
+    width: 2rem;
+    bottom: 0.4rem;
+    margin-right: 0.89rem;
+  }
+  .conjuntoInputRegistro ion-input{
+    font-size: 0.9rem;
+  }
+  form{
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  form ion-label {
+    font-size: 1.2rem;
+  }
+
+  .avisoRestriccion{
+    font-size: 1rem;
+  }
+  .tituloRegistro{
+    font-size: 1.75rem;
+  }
+
+  .botonFormRegistro ion-button{
+    width:auto;
+    height: 2.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .accesoRegistro{
+    font-size:1rem;
+    width:15rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+  .accesoRegistro a{
+    color: #5094FF;
+  }
+
+
 }
