@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import {SQLiteObject} from '@ionic-native/sqlite';
-import Any = jasmine.Any;
 import {Platform} from '@ionic/angular';
-import {SQLite} from '@ionic-native/sqlite/ngx';
+import {Actividad} from '../app/objetos';
+import {SQLite, SQLiteObject} from '@awesome-cordova-plugins/sqlite';
 
 @Injectable({
   providedIn: 'root'
@@ -11,20 +10,17 @@ export class FavServiceService {
 
   readonly dbName: string = 'remotestack.db';
   readonly dbTable: string = 'favsTable';
-  activities: Array<Any>;
+  activities: Array<Actividad>;
   private dbInstance: SQLiteObject;
 
-  constructor(private platform: Platform, private sqlite: SQLite) {
+  constructor(private platform: Platform, private sqlite: SQLiteObject) {
     this.databaseConn();
   }
 
   // Create SQLite database
   databaseConn() {
     this.platform.ready().then(() => {
-      this.sqlite.create({name: this.dbName, location: 'default'})
-        .then((sqLite: SQLiteObject) => {
-          this.dbInstance = sqLite;
-          sqLite.executeSql(`
+          this.sqlite.executeSql(`
               CREATE TABLE IF NOT EXISTS ${this.dbTable} (
               userId INTEGER PRIMARY KEY,
               email varchar(255),
@@ -35,11 +31,10 @@ export class FavServiceService {
             .catch((error) => alert(JSON.stringify(error)));
         })
         .catch((error) => alert(JSON.stringify(error)));
-    });
   }
 
   // Add new Fav Activity
-  public addUser(n, e) {
+  public addFav(n, e) {
     // validation
     if (!n.length || !e.length) {
       alert('Provide both email & name');
