@@ -6,6 +6,11 @@
   object-fit: cover;
 }
 
+ion-slides{
+  width: 110%;
+  margin-left: -1rem;
+}
+
 @media (min-width: 960px) {
   .wrapper ion-img {
     height: 35em;
