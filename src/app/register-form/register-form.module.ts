@@ -8,6 +8,8 @@ import { RegisterFormPageRoutingModule } from './register-form-routing.module';
 
 import { RegisterFormPage } from './register-form.page';
 import {AngularFireDatabase} from '@angular/fire/compat/database';
+import {HeaderPageModule} from "../header/header.module";
+import {FooterPageModule} from "../footer/footer.module";
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import {AngularFireDatabase} from '@angular/fire/compat/database';
     FormsModule,
     IonicModule,
     RegisterFormPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HeaderPageModule,
+    FooterPageModule
   ],
   exports: [
     RegisterFormPage
