@@ -64,20 +64,21 @@ form ion-input{
     padding: 10rem;
   }
   .icono{
-    margin-top: 3rem;
-    height: 2.95rem;
-    width: 3.18rem;
-    bottom: 2.8rem;
-    margin-right: 1.5rem;
+    margin-top: 0.9rem;
+    height: 1.8rem;
+    width: 2rem;
+    bottom: 0.4rem;
+    margin-right: 0.89rem;
   }
 
   .tituloInicioSesion{
     margin-top:2rem;
     margin-left:2rem;
+    font-size: 2.3rem;
   }
 
   .conjuntoInput ion-input{
-    font-size: 2rem;
+    font-size: 0.9rem;
   }
 
   form{
@@ -85,23 +86,27 @@ form ion-input{
     margin-left: 5rem;
   }
 
-  form label{
-    font-size: 2.2rem;
+  form ion-label{
+    font-size: 1.2rem;
   }
 
   .avisoRestriccion{
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .botonForm ion-button{
-    height: 3rem;
-    margin-top: 3rem;
-    font-size: 2rem;
+    margin-top: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
   }
 
   .accesoRegistro{
-    font-size:1.5rem;
-    width:22rem;
+    font-size:1rem;
+    width:15rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    color: black;
   }
   .accesoRegistro a:hover{
     color: #5094FF;
@@ -128,14 +133,15 @@ form ion-input{
   }
   .tituloInicioSesion{
     margin-left:2rem;
+
   }
   form{
     margin-right: 2rem;
     margin-left: 2rem;
   }
 
-  form label{
-    font-size: 1.8rem;
+  form ion-label{
+    font-size: 1.5rem;
   }
 
   .avisoRestriccion{
@@ -166,7 +172,7 @@ form ion-input{
 */
 @media (max-width: 640px) {
   .login{
-    padding: 2rem;
+    padding: 1rem;
   }
   .icono{
     margin-top: 0.9rem;
@@ -183,23 +189,25 @@ form ion-input{
     margin-left: 2rem;
   }
 
-  form label{
-    font-size: 1.2rem;
+  form ion-label{
+    font-size: 1.1rem;
   }
 
   .avisoRestriccion{
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .tituloInicioSesion{
     font-size: 1.75rem;
     margin-right: 1.25rem;
+    margin-bottom:2rem;
   }
 
   .botonForm ion-button{
     width:auto;
     height: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 
   }
 

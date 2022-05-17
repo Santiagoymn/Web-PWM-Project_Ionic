@@ -15,7 +15,7 @@
     </a>
 
     <div class='loginRegister' *ngIf="!getLogged()">
-      <a routerLink="login">Login</a>/<a routerLink="/register-form">Register</a>
+      <a routerLink="/login">Login</a>/<a routerLink="/register">Register</a>
     </div>
 
     <div class="lineaHeaderOculto" id="lineHeader">
@@ -24,10 +24,10 @@
       <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2FtresRayas.png?alt=media&token=56735219-f39f-45dd-8fa6-c042cd011409" class="tresRayas2" alt="Tres rayas" (click)="closeTresRayas()"></ion-img>
 
       <div class="banderasMovil">
-        <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fspain-flag.png?alt=media&token=7003bfba-5afd-4fe1-bc30-21356214976a" class="banderaPrincipal" alt="Español"></ion-img></p>
-        <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fbritain-flag.png?alt=media&token=3017b273-2e13-4b84-b77c-118898bb5bf5" class="banderaPrincipal" alt="English"></ion-img></p>
-        <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Ffrance-flag.svg?alt=media&token=bf6a7272-63f2-4285-b4dc-7a461bc3936a" class="banderaPrincipal" alt="Français"></ion-img></p>
-        <p><ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fgermany-flag.png?alt=media&token=cd0dcf1e-160e-447a-916a-d69e75f3550c" class="banderaPrincipal" alt="Deutsch"></ion-img></p>
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fspain-flag.png?alt=media&token=7003bfba-5afd-4fe1-bc30-21356214976a" class="banderaPrincipal" alt="Español"></ion-img>
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fbritain-flag.png?alt=media&token=3017b273-2e13-4b84-b77c-118898bb5bf5" class="banderaPrincipal" alt="English"></ion-img>
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Ffrance-flag.svg?alt=media&token=bf6a7272-63f2-4285-b4dc-7a461bc3936a" class="banderaPrincipal" alt="Français"></ion-img>
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fgermany-flag.png?alt=media&token=cd0dcf1e-160e-447a-916a-d69e75f3550c" class="banderaPrincipal" alt="Deutsch"></ion-img>
       </div>
 
       <a routerLink="login" *ngIf="getLogged()">
@@ -35,7 +35,7 @@
       </a>
 
       <div class='loginRegisterMovil' *ngIf="!getLogged()">
-        <a routerLink="login">Login</a>/<a routerLink="/register-form">Register</a>
+        <a routerLink="/login">Login</a>/<a routerLink="/register">Register</a>
       </div>
 
       <div class="rectanguloSeparacionDropdown"></div>
@@ -83,7 +83,7 @@
           </li>
           <li>
             <div ngbDropdown class="d-inline-block botonBanderasDropDown" placement="bottom-right">
-              <ion-button type="button" class="btn botonBanderas" id="dropdownBasic1" ngbDropdownToggle>
+              <ion-button type="button" class="btn botonBanderas" id="dropdownBasic1" color="transparent" ngbDropdownToggle>
                 <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/banderas%2Fspain-flag.png?alt=media&token=7003bfba-5afd-4fe1-bc30-21356214976a" class="banderaPrincipalActual" alt="Español"></ion-img>
               </ion-button>
               <div aria-labelledby="dropdownBasic1" ngbDropdownMenu class="dropdown-menu">
