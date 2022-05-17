@@ -45,9 +45,14 @@ const routes: Routes = [
   },
   {
     path: 'actividad',
-    loadChildren: () => import('./activity-page-information/activity-page-information.module')
+    loadChildren: () => import('./activity-page/activity-page-information/activity-page-information.module')
       .then( m => m.ActivityPageInformationPageModule)
   },
+  {
+    path: 'activity-page-empresas',
+    loadChildren: () => import('./activity-page/activity-page-empresas/activity-page-empresas.module').then(m => m.ActivityPageEmpresasPageModule)
+  },
+
 
 ];
 

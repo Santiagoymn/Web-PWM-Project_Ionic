@@ -3,8 +3,8 @@ import {Actividad, Empresa} from '../../objetos';
 import {GetterFirebaseService} from '../../serviceGeneral/getter-firebase.service';
 @Component({
   selector: 'app-activity-page-information',
-  templateUrl: './activity-page-information.component.html',
-  styleUrls: ['activity-page-information.page.scss', '../../app/app.component.scss']
+  templateUrl: 'activity-page-information.page.html',
+  styleUrls: ['activity-page-information.page.scss', '../../app.component.scss']
 })
 export class ActivityPageInformationPage implements OnInit {
 
