@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
   },
   {
-    path: 'register-form',
+    path: 'register',
     loadChildren: () => import('./register-form/register-form.module').then( m => m.RegisterFormPageModule)
   },
   {
@@ -36,8 +36,12 @@ const routes: Routes = [
     loadChildren: () => import('./home-page-about-us/home-page-about-us.module').then( m => m.HomePageAboutUsPageModule)
   },
   {
-    path: 'header',
-    loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registered-succesful',
+    loadChildren: () => import('./register-message/register-message.module').then( m => m.RegisterMessagePageModule)
   },
 ];
 
