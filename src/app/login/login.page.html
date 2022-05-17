@@ -7,13 +7,13 @@
           <div class="contenedorForm">
             <h3 class="tituloInicioSesion">Inicio de Sesión</h3>
             <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" novalidate>
-              <label for="email"> Email </label>
+              <ion-label> Email </ion-label>
               <div class="conjuntoInput">
                 <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Farroba.png?alt=media&token=1d161ac4-11ad-4b31-bc77-fe607324da06" class="icono" alt="Email"></ion-img>
                 <ion-input type="text" id="email" name="email" formControlName="email" required="true"></ion-input>
               </div>
 
-              <label for="passwd">Contraseña</label>
+              <ion-label>Contraseña</ion-label>
               <div class="conjuntoInput">
                 <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-contrase%C3%B1a.png?alt=media&token=ff4dc458-37fb-45fa-833c-10e7e41dba6c" class="icono" alt="Contraseña"></ion-img>
                 <ion-input type="password" id="passwd" name="passwd" formControlName="password" required="true"></ion-input>
@@ -24,7 +24,7 @@
               </div>
 
               <div class="botonForm">
-                <ion-button type="submit" id="inicio">
+                <ion-button type="submit" id="inicio" fill="outline">
                   Iniciar Sesión
                 </ion-button>
               </div>
