@@ -9,6 +9,7 @@ import {HomePageCategoriesPageModule} from '../home-page-categories/home-page-ca
 import {HomePageAboutUsPageModule} from '../home-page-about-us/home-page-about-us.module';
 import {CarruselPage} from '../carrusel/carrusel.page';
 import {HeaderPageModule} from "../header/header.module";
+import {FooterPageModule} from "../footer/footer.module";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {HeaderPageModule} from "../header/header.module";
         HomePageRoutingModule,
         HomePageCategoriesPageModule,
         HomePageAboutUsPageModule,
-        HeaderPageModule
+        HeaderPageModule,
+        FooterPageModule
     ],
   declarations: [HomePage, CarruselPage]
 })
