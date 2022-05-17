@@ -34,14 +34,14 @@ export class FavServiceService {
   }
 
   // Add new Fav Activity
-  public addFav(n, e) {
+  public addFav(email, activity) {
     // validation
-    if (!n.length || !e.length) {
+    if (!email.length || !activity.length) {
       alert('Provide both email & name');
       return;
     }
     this.dbInstance.executeSql(`
-        INSERT INTO ${this.dbTable} (email, activity) VALUES ('${n}', '${e}')`, [])
+        INSERT INTO ${this.dbTable} (email, activity) VALUES ('${email}', '${activity}')`, [])
       .then(() => {
         alert('Success');
       });
@@ -74,9 +74,9 @@ export class FavServiceService {
   }
 
   // Delete seleted activity
-  deleteUser(activity) {
+  deleteFav(email, activity) {
     this.dbInstance.executeSql(`
-      DELETE FROM ${this.dbTable} WHERE activity = ${activity}`, [])
+      DELETE FROM ${this.dbTable} WHERE activity = ${activity} and email = ${email}`, [])
       .then(() => {
       })
       .catch(e => {
