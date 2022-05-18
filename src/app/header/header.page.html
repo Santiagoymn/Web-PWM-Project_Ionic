@@ -11,7 +11,7 @@
     <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2FtresRayas.png?alt=media&token=56735219-f39f-45dd-8fa6-c042cd011409" class="tresRayas" alt="Tres rayas" (click)="toggleLineHeaderOculto()"></ion-img>
 
     <a routerLink="login" *ngIf="getLogged()">
-      <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887" class="iconoLogueado" alt='Icono logueado'></ion-img>
+      <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887" class="iconoLogueado" alt='Icono logueado' [routerLink]="['/user-profile']"></ion-img>
     </a>
 
     <div class='loginRegister' *ngIf="!getLogged()">
@@ -31,7 +31,7 @@
       </div>
 
       <a routerLink="login" *ngIf="getLogged()">
-        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887" class="iconoLogueadoMovil" alt='Icono logueado'></ion-img>
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Ficono-usuario.png?alt=media&token=a7741f6e-bdce-46a4-96ec-0c20eee72887" class="iconoLogueadoMovil" alt='Icono logueado' [routerLink]="['/user-profile']"></ion-img>
       </a>
 
       <div class='loginRegisterMovil' *ngIf="!getLogged()">

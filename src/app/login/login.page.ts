@@ -43,7 +43,6 @@ export class LoginPage implements OnInit {
         .then((result) => {
           alert('Ha iniciado sesión correctamente');
           this.navCtrl.navigateForward('/home').then(() => {
-            sessionStorage.setItem('logged', 'true');
             this.checkoutForm.reset();
           });
         }).catch((error) => {
