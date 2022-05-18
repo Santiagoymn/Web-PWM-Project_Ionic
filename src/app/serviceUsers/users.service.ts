@@ -12,20 +12,8 @@ import {updateProfile} from '@angular/fire/auth';
 export class UsersService {
   @Input() usuario!: UsuarioFire;
 
-  constructor(private firebaseAuth: AngularFireAuth,private firestore: AngularFirestore) { }
+  constructor(private firebaseAuth: AngularFireAuth, private firestore: AngularFirestore) { }
 
-  // Sign up with email/password
-  signUp(email: string, password: string) {
-    return this.firebaseAuth
-      .createUserWithEmailAndPassword(email, password)
-      .then((result) => {
-        window.alert('You have been successfully registered!');
-        console.log(result.user);
-      })
-      .catch((error) => {
-        window.alert(error.message);
-      });
-  }
   // Sign in with email/password
   login(email: string, password: string) {
     return this.firebaseAuth
@@ -36,17 +24,15 @@ export class UsersService {
       .catch((error) => {
         window.alert(error.message);
       });
-
-
   }
 
-  getUsuarios() {
-    return this.firestore.collection<UsuarioFire>('usuarios').valueChanges();
-  }
-
-  addNewUser(newId: any, name: string, surname: string, user: string){
+  addNewUser(newId: any, name: string, surname: string, user: string, urlPic: string){
     this.firestore.collection('usuarios').doc(newId)
-      .set({nombre: name, apellidos: surname, usuario: user}).then (r =>{});
+      .set({nombre: name, apellidos: surname, usuario: user, profilePicture: urlPic}).then (r =>{});
+  }
+
+  getInfoUserLogged(){
+    return this.firebaseAuth.user;
   }
 
 }

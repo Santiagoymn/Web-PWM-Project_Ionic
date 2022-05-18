@@ -49,11 +49,12 @@ const routes: Routes = [
       .then( m => m.ActivityPageInformationPageModule)
   },
   {
+    path: 'user-not-logged-message',
+    loadChildren: () => import('./user-not-logged-message/user-not-logged-message.module').then( m => m.UserNotLoggedMessagePageModule)
+  },
     path: 'activity-page-empresas',
     loadChildren: () => import('./activity-page/activity-page-empresas/activity-page-empresas.module').then(m => m.ActivityPageEmpresasPageModule)
   },
-
-
 ];
 
 @NgModule({
