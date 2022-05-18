@@ -1,0 +1,110 @@
+.AreaDeInformación{ /* Área en donde se encuentra toda la información */
+  display: inline-block;
+}
+/*////////// ACTIVIDAD //////////*/
+.posicionamientoImagenFondo{
+  position: relative; /* Posicionamiento de la imagen de fondo principal */
+}
+.imagenFondo { /* Tamaño de la imagen de fondo principal */
+  width: 100%;
+  object-fit: cover;
+}
+.centrado{ /* Centrado del nombre de la actividad en la imagen */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ion-checkbox{
+  position: absolute;
+  top: 5%;
+  left: 98%;
+  transform: translate(-10%, -70%);
+}
+
+
+
+/*////////// MEDIA QUERY //////////*/
+/*
+  ##Device = Desktops
+  ##Screen = 960px to higher resolution desktops
+*/
+
+@media (min-width: 960px) {
+  /*////////// ACTIVIDAD //////////*/
+  .imagenFondo { /* Tamaño de la imagen de fondo principal */
+    height: 32.375rem;
+  }
+  /*////////// Descripción//////////*/
+  .separacionBloque{ /* Para separar los bloques de información */
+    margin-top: 6rem;
+  }
+  .descripcionActividad { /* Márgenes del texto de la descripción de la actividad */
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+  }
+  .localizacionInformacion{
+    margin-bottom: 10rem;
+  }
+  .tituloEmpresas{
+    text-align: left;
+    margin-left: 6.25rem;
+  }
+}
+
+/*
+  ##Device = Tablets
+  ##Screen = 640px to 960px
+*/
+
+@media (min-width: 640px) and (max-width: 960px) {
+  /*////////// ACTIVIDAD //////////*/
+  .imagenFondo { /* Tamaño de la imagen de fondo principal */
+    height: 32.375rem;
+  }
+  /*////////// Descripción//////////*/
+  .separacionBloque{ /* Para separar los bloques de información */
+    margin-top: 4rem;
+  }
+  .descripcionActividad { /* Márgenes del texto de la descripción de la actividad */
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .localizacionInformacion{
+    margin-bottom: 10rem;
+  }
+  .tituloEmpresas{
+    text-align: left;
+    margin-left: 2rem;
+  }
+}
+
+/*
+  ##Device = Mobiles
+  ##Screen = 640px to minimal resolution
+*/
+
+@media (max-width: 640px) {
+  /*////////// ACTIVIDAD //////////*/
+  .imagenFondo { /* Tamaño de la imagen de fondo principal */
+    height: 22.375rem;
+  }
+  /*////////// Descripción//////////*/
+  .separacionBloque{ /* Para separar los bloques de información */
+    margin-top: 2.5rem;
+  }
+  .descripcionActividad { /* Márgenes del texto de la descripción de la actividad */
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+  }
+  .localizacionInformacion{
+    margin-bottom: 6em;
+  }
+  .tituloEmpresas{
+    text-align: left;
+    margin-left: 1.75rem;
+  }
+}
+
+

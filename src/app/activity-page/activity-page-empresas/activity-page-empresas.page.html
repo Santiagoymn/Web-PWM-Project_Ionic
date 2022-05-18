@@ -1,0 +1,23 @@
+<article class="empresa">
+  <div *ngFor="let empresa of empresas">
+    <div class="nombreEmpresaOrganizadora">{{empresa.name}}</div>
+    <div class="informacionEspecifica">
+      <div class="iconoDato">
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Fpin.png?alt=media&token=d88cccc6-33f5-4de2-9ac4-32b26eda6e4d" alt="Localización empresa" class="imagenPin"></ion-img>
+        {{empresa.place}}
+      </div>
+      <div class="iconoDato">
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Feuro.png?alt=media&token=5d9a58b9-606e-4ad3-9157-5d6732e14acc" alt="Precio de la empresa" class="imagenEuro"></ion-img>
+        {{empresa.price}}
+      </div>
+      <div class="iconoDato">
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2FtelefonoBlanco.png?alt=media&token=98af4b23-5c1d-482f-a4ed-98216c6df3e8" alt="Telefono de la empresa" class="imagenTelefono"></ion-img>
+        {{empresa.tNumber}}
+      </div>
+      <div class="iconoDato">
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2Fweb.png?alt=media&token=8de7ba02-e285-4fc3-84c4-a622ea53e55b" alt="Web de la empresa" class="imagenWeb"></ion-img>
+        {{empresa.web}}
+      </div>
+    </div>
+  </div>
+</article>
