@@ -8,6 +8,10 @@
 		"classpath": "com.capacitorjs.plugins.app.AppPlugin"
 	},
 	{
+		"pkg": "@capacitor/browser",
+		"classpath": "com.capacitorjs.plugins.browser.BrowserPlugin"
+	},
+	{
 		"pkg": "@capacitor/haptics",
 		"classpath": "com.capacitorjs.plugins.haptics.HapticsPlugin"
 	},
@@ -18,9 +22,5 @@
 	{
 		"pkg": "@capacitor/status-bar",
 		"classpath": "com.capacitorjs.plugins.statusbar.StatusBarPlugin"
-	},
-	{
-		"pkg": "capacitor-data-storage-sqlite",
-		"classpath": "com.jeep.plugin.capacitor.capacitordatastoragesqlite.CapacitorDataStorageSqlitePlugin"
 	}
 ]

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Platform} from '@ionic/angular';
 import {Actividad} from '../app/objetos';
-import {SQLite, SQLiteObject} from '@awesome-cordova-plugins/sqlite';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 
 @Injectable({
   providedIn: 'root'
@@ -13,24 +13,23 @@ export class FavServiceService {
   activities: Array<Actividad>;
   private dbInstance: SQLiteObject;
 
-  constructor(private platform: Platform, private sqlite: SQLiteObject) {
-    this.databaseConn();
+  constructor(private platform: Platform, private sqlite: SQLite) {
+
   }
 
   // Create SQLite database
   databaseConn() {
-    this.platform.ready().then(() => {
-          this.sqlite.executeSql(`
-              CREATE TABLE IF NOT EXISTS ${this.dbTable} (
-              userId INTEGER PRIMARY KEY,
-              email varchar(255),
-              activity varchar(255))`, [])
-            .then((res) => {
-              alert(JSON.stringify(res));
+  this.platform.ready().then(() => {
+          this.sqlite.create({name: this.dbName, location: 'default'})
+            .then((sqLite: SQLiteObject) =>{
+              this.dbInstance = sqLite;
+              sqLite.executeSql('CREATE TABLE IF NOT EXISTS ${this.dbTable} (' +
+                'userId INTEGER PRIMARY KEY,' +
+                'email varchar(255), activity varchar(255))', []);
             })
-            .catch((error) => alert(JSON.stringify(error)));
+            .catch((error) => alert('error'));
         })
-        .catch((error) => alert(JSON.stringify(error)));
+        .catch((error) => alert('error'));
   }
 
   // Add new Fav Activity
