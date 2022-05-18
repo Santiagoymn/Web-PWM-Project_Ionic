@@ -21,7 +21,7 @@ import {FooterPageModule} from './footer/footer.module';
 import {CarruselPage} from './carrusel/carrusel.page';
 import {HomePageCategoriesPageModule} from './home-page-categories/home-page-categories.module';
 import {HomePageAboutUsPageModule} from './home-page-about-us/home-page-about-us.module';
-import {HeaderPageModule} from "./header/header.module";
+import {HeaderPageModule} from './header/header.module';
 
 @NgModule({
   declarations: [AppComponent, CarruselPage],

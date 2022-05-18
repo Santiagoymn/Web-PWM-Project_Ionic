@@ -44,9 +44,16 @@ const routes: Routes = [
     loadChildren: () => import('./register-message/register-message.module').then( m => m.RegisterMessagePageModule)
   },
   {
-    path: 'user-profile',
-    loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
+    path: 'actividad',
+    loadChildren: () => import('./activity-page/activity-page-information/activity-page-information.module')
+      .then( m => m.ActivityPageInformationPageModule)
   },
+  {
+    path: 'activity-page-empresas',
+    loadChildren: () => import('./activity-page/activity-page-empresas/activity-page-empresas.module').then(m => m.ActivityPageEmpresasPageModule)
+  },
+
+
 ];
 
 @NgModule({
