@@ -18,20 +18,20 @@ export class ActivityPageInformationPage implements OnInit {
 
   constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
     this.user = getAuth().currentUser.email;
-    this.favService.databaseConn();
   }
 
   async ngOnInit() {
+    await this.favService.databaseConn();
     this.actividades = await this.getterJsonService.getCategoriaActividades(localStorage.getItem('category'));
   }
 
   actividadClicada(){
-    return  localStorage.getItem('activity');
+    return localStorage.getItem('activity');
   }
 
   checkBoxClick(e){
     if(e.currentTarget.checked){ // Usuario añade actividad a favs
-      this.favService.addFav(this.user, localStorage.getItem('actitivy'));
+      this.favService.addFav(this.user, localStorage.getItem('activity'));
     }else{ // Usuario elimina actividad a favs
       this.favService.deleteFav(this.user, localStorage.getItem('activity'));
     }

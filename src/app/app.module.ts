@@ -4,7 +4,6 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SQLite } from '@ionic-native/sqlite/ngx';
 import {RegisterFormPageModule} from './register-form/register-form.module'; // plugins
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,6 +21,7 @@ import {CarruselPage} from './carrusel/carrusel.page';
 import {HomePageCategoriesPageModule} from './home-page-categories/home-page-categories.module';
 import {HomePageAboutUsPageModule} from './home-page-about-us/home-page-about-us.module';
 import {HeaderPageModule} from './header/header.module';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 
 @NgModule({
   declarations: [AppComponent, CarruselPage],
@@ -45,7 +45,7 @@ import {HeaderPageModule} from './header/header.module';
     AngularFireAuthModule,
     HomePageCategoriesPageModule,
     HomePageAboutUsPageModule,
-    HeaderPageModule
+    HeaderPageModule,
   ],
   providers: [SQLite, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
