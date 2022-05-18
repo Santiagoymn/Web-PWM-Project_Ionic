@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { ActividadesPageActividadesPageRoutingModule } from './category-page-actividades-routing.module';
 
 import { CategoryPageActividadesPage } from './category-page-actividades.page';
+import {HeaderPageModule} from "../header/header.module";
+import {FooterPageModule} from "../footer/footer.module";
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { CategoryPageActividadesPage } from './category-page-actividades.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ActividadesPageActividadesPageRoutingModule
+    ActividadesPageActividadesPageRoutingModule,
+    HeaderPageModule,
+    FooterPageModule
   ],
   exports: [
     CategoryPageActividadesPage
