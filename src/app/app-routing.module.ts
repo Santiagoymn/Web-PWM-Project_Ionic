@@ -44,6 +44,11 @@ const routes: Routes = [
     loadChildren: () => import('./register-message/register-message.module').then( m => m.RegisterMessagePageModule)
   },
   {
+    path: 'user-profile',
+    loadChildren: () => import('./user-profile/user-profile.module')
+      .then( m => m.UserProfilePageModule)
+  },
+  {
     path: 'actividad',
     loadChildren: () => import('./activity-page/activity-page-information/activity-page-information.module')
       .then( m => m.ActivityPageInformationPageModule)
@@ -52,9 +57,11 @@ const routes: Routes = [
     path: 'user-not-logged-message',
     loadChildren: () => import('./user-not-logged-message/user-not-logged-message.module').then( m => m.UserNotLoggedMessagePageModule)
   },
+  {
     path: 'activity-page-empresas',
+    // eslint-disable-next-line max-len
     loadChildren: () => import('./activity-page/activity-page-empresas/activity-page-empresas.module').then(m => m.ActivityPageEmpresasPageModule)
-  },
+  }
 ];
 
 @NgModule({
