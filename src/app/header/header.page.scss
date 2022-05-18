@@ -69,7 +69,7 @@ a{
     text-align: center;
     text-transform:uppercase;
     font-family: "Helvetica", serif;
-    margin-left: 0rem;
+    margin-left: 0;
   }
 
   .loginRegister{
@@ -84,7 +84,7 @@ a{
   .iconoLogueado{
     position: relative;
     float: right;
-    margin-top: -7rem;
+    margin-top: -5rem;
     margin-right: 4rem;
     font-size: 1.25rem;
     width: 4rem;
@@ -467,7 +467,7 @@ a{
     color: black;
     font-weight:normal;
     font-size:1.4rem;
-    padding:0rem;
+    padding:0;
     text-transform:uppercase;
     font-family: "Helvetica", serif;
   }
@@ -639,7 +639,7 @@ a{
     height: 1rem;
     margin-right: 0.5rem;
     margin-left: 2rem;
-    margin-top: 0rem;
+    margin-top: 0;
   }
 
   .textoDropDown {
