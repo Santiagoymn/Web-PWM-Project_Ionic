@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {UsuarioFire} from '../objetos';
 import {UsersService} from '../serviceUsers/users.service';
-import {tap} from 'rxjs';
 import {Router} from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {NavController} from '@ionic/angular';
@@ -31,11 +30,6 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit(): void {
-    this.usersService.getUsuarios()
-      .pipe(
-        tap((usuarios: UsuarioFire[]) => this.usuarios = usuarios)
-      )
-      .subscribe();
   }
 
   onSubmit(): void {

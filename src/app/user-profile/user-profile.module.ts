@@ -7,13 +7,19 @@ import { IonicModule } from '@ionic/angular';
 import { UserProfilePageRoutingModule } from './user-profile-routing.module';
 
 import { UserProfilePage } from './user-profile.page';
+import {UserNotLoggedMessagePageModule} from '../user-not-logged-message/user-not-logged-message.module';
+import {HeaderPageModule} from '../header/header.module';
+import {FooterPageModule} from '../footer/footer.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    UserProfilePageRoutingModule
+    UserProfilePageRoutingModule,
+    UserNotLoggedMessagePageModule,
+    HeaderPageModule,
+    FooterPageModule
   ],
   declarations: [UserProfilePage]
 })

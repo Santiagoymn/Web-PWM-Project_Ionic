@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
   },
+  {
+    path: 'user-not-logged-message',
+    loadChildren: () => import('./user-not-logged-message/user-not-logged-message.module').then( m => m.UserNotLoggedMessagePageModule)
+  },
 ];
 
 @NgModule({

@@ -4,10 +4,6 @@
   object-fit: cover;
   height: auto;
   justify-content: center;
-  min-height: 100vh;
-  padding: 5rem;
-  background-size: 100% 100%;
-  margin-bottom: -5rem;
   color: black;
 }
 .contenedorProfile{
@@ -15,20 +11,188 @@
   display: flex;
   flex-direction: column;
 }
-.nombreApellidos{
+.textoPerfil{
   width:auto;
   align-self: center;
-  margin-left:0;
-  font-size: 1.75rem;
   color:black;
 }
+.iconoPerfil{
+  align-self: center;
+}
+
 .imagenPerfil{
   align-self: center;
-  margin-top:2rem;
+  width:100% !important;
+  height : 100% !important;
+}
+.favoritosLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(63, 191, 191, 0.2);
+  width:auto;
+}
+.favoritosTexto{
+  width:auto;
+  align-self: center;
+  color:black;
+  text-decoration: none;
+}
+
+.botonLogOut{
+  align-self: center;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 
 
-.app-footer{
-  position:relative;
+
+
+/*/////////// MEDIA QUERY ///////////*/
+/*
+  ##Device = Desktops
+  ##Screen = 960px to higher resolution desktops
+*/
+@media (min-width: 960px) {
+  .profile{
+    min-height: 100vh;
+    padding: 10rem;
+    background-size: 100% 100%;
+    margin-bottom: -5rem;
+  }
+  .textoPerfil{
+    font-size: 2rem;
+  }
+  .iconoPerfil{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  #nombreApellidos{
+    font-size: 2.5rem;
+  }
+  .imagenPerfil{
+    margin-top:5rem;
+    max-width: 12rem !important;
+    max-height: 12rem !important;
+  }
+  .favoritosLink {
+    margin-top:3rem;
+    margin-bottom:3rem;
+    height: 3rem;
+  }
+  .favoritosTexto{
+    font-size: 1.5rem;
+  }
+  #corazonIcono{
+    margin-top:0;
+    margin-left: 1rem;
+  }
+  .botonLogOut{
+    margin-top: 2rem;
+    height: 2rem;
+    margin-bottom: 8rem;
+    font-size: 1rem;
+  }
+
 }
+
+/*
+  ##Device = Tablets
+  ##Screen = 640px to 960px
+*/
+@media (min-width: 640px) and (max-width: 960px) {
+  .profile{
+    min-height: 100vh;
+    padding: 2rem;
+    background-size: 100% 100%;
+    margin-bottom: -5rem;
+  }
+  .textoPerfil{
+    font-size: 1.5rem;
+  }
+  .iconoPerfil{
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-top: 2rem;
+  }
+
+  #nombreApellidos{
+    font-size: 2.5rem;
+  }
+  .imagenPerfil{
+    margin-top:5rem;
+    max-width: 12rem !important;
+    max-height: 12rem !important;
+  }
+  .favoritosLink {
+    margin-top:3rem;
+    margin-bottom:3rem;
+    height: 3rem;
+  }
+  .favoritosTexto{
+    font-size: 1.5rem;
+  }
+  #corazonIcono{
+    margin-top:0;
+    margin-left: 2rem;
+  }
+  .botonLogOut{
+    margin-top: 2rem;
+    height: 2rem;
+    margin-bottom: 8rem;
+    font-size: 1rem;
+  }
+}
+
+/*
+  ##Device = Mobiles
+  ##Screen = 640px to minimal resolution
+*/
+@media (max-width: 640px) {
+  .profile{
+    min-height: 100vh;
+    padding: 2rem;
+    background-size: 100% 100%;
+    margin-bottom: -5rem;
+  }
+  .textoPerfil{
+    font-size: 1.5rem;
+  }
+  .iconoPerfil{
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-top: 2rem;
+  }
+
+  #nombreApellidos{
+    font-size: 2.5rem;
+  }
+  .imagenPerfil{
+    margin-top:5rem;
+    max-width: 12rem !important;
+    max-height: 12rem !important;
+  }
+  .favoritosLink {
+    margin-top:3rem;
+    margin-bottom:3rem;
+    height: 3rem;
+  }
+  .favoritosTexto{
+    font-size: 1.5rem;
+  }
+  #corazonIcono{
+    margin-top:0;
+    margin-left: 1rem;
+  }
+  .botonLogOut{
+    margin-top: 2rem;
+    height: 1rem;
+    margin-bottom: 8rem;
+    font-size: 1rem;
+  }
+
+}
+
+
