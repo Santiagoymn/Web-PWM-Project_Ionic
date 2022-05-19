@@ -1,12 +1,12 @@
 <ion-content [fullscreen]="true">
   <app-header></app-header>
-  <div *ngIf="getLogged() !== true">
-    <app-user-not-logged-message></app-user-not-logged-message>
-  </div>
-  <div *ngIf="getLogged() === true">
+<!--  <div *ngIf="getLogged() !== true">-->
+<!--    <app-user-not-logged-message></app-user-not-logged-message>-->
+<!--  </div>-->
+<!--  <div *ngIf="getLogged() === true">-->
     <div class="categoryWrapper">
       <div *ngFor="let actividadF of actividadesFav">
-        <div *ngFor="let actividad of actividades" let z=index>
+        <div *ngFor="let actividad of actividades let z=index">
           <div *ngIf="(actividad.name) === actividadF[z].name">
             <a routerLink="/actividad">
               <div class='actividad' (click)="puestaVariableActivity(actividad.name)" >
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-  </div>
+<!--  </div>-->
 
   <app-footer></app-footer>
 </ion-content>
