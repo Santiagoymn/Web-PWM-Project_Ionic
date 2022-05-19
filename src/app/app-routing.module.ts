@@ -44,17 +44,14 @@ const routes: Routes = [
     loadChildren: () => import('./register-message/register-message.module').then( m => m.RegisterMessagePageModule)
   },
   {
-<<<<<<<<< Temporary merge branch 1
     path: 'actividad',
-    loadChildren: () => import('./activity-page-information/activity-page-information.module')
+    loadChildren: () => import('./activity-page/activity-page-information/activity-page-information.module')
       .then( m => m.ActivityPageInformationPageModule)
   },
-
-=========
+    {
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
   },
->>>>>>>>> Temporary merge branch 2
 ];
 
 @NgModule({
