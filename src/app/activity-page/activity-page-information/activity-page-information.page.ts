@@ -15,9 +15,16 @@ export class ActivityPageInformationPage implements OnInit {
   empresas!: Empresa[];
   actividades!: Actividad[];
   user: string;
-
+  checked: boolean;
   constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
     this.user = getAuth().currentUser.email;
+
+    alert(this.favService.checkActivity(localStorage.getItem('activity'), this.user));
+    if(this.favService.checkActivity(localStorage.getItem('activity'), this.user)){
+      this.checked = true;
+    }else{
+      this.checked = false;
+    }
   }
 
   async ngOnInit() {
