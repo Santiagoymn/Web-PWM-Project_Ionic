@@ -20,12 +20,16 @@ export class FavServiceService {
   // Create SQLite database
   databaseConn() {
   this.platform.ready().then(() => {
-          this.sqlite.create({name: this.dbName, location: 'default'})
-            .then((sqLite: SQLiteObject) =>{
-              this.dbInstance = sqLite;
-              sqLite.executeSql('CREATE TABLE IF NOT EXISTS ${this.dbTable} (' +
-                'userId INTEGER PRIMARY KEY,' +
-                'email varchar(255), activity varchar(255))', []);
+          this.sqlite.create({
+            name: this.dbName,
+            location: 'default'
+          }).then((sqLite: SQLiteObject) => {
+            this.dbInstance = sqLite;
+            sqLite.executeSql(`
+              CREATE TABLE IF NOT EXISTS ${this.dbTable} (
+                userId INTEGER PRIMARY KEY,
+                email varchar(255),
+                activity varchar(255))`, []);
             })
             .catch((error) => alert('error'));
         })
