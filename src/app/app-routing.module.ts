@@ -65,6 +65,10 @@ const routes: Routes = [
   {
     path: 'user-edit-profile',
     loadChildren: () => import('./user-edit-profile/user-edit-profile.module').then( m => m.UserEditProfilePageModule)
+  },
+  {
+    path: 'favourites-list',
+    loadChildren: () => import('./favourites-list/favourites-list.module').then( m => m.FavouritesListPageModule)
   }
 ];
 
