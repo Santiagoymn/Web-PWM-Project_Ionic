@@ -29,6 +29,10 @@ export class FavouritesListPage implements OnInit {
     }
   }
 
+  getLogged(){
+    return (getAuth().currentUser !== null);
+  }
+
   async ngOnInit() {
     this.actividades = await this.getterJsonService.getCategoriaActividades(localStorage.getItem('category'));
     this.actividadesFav = await this.favService.getActivities('m@m.mm');
