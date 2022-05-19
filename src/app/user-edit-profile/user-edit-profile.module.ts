@@ -9,6 +9,7 @@ import { UserEditProfilePageRoutingModule } from './user-edit-profile-routing.mo
 import { UserEditProfilePage } from './user-edit-profile.page';
 import {HeaderPageModule} from '../header/header.module';
 import {FooterPageModule} from '../footer/footer.module';
+import {UserNotLoggedMessagePageModule} from '../user-not-logged-message/user-not-logged-message.module';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import {FooterPageModule} from '../footer/footer.module';
         UserEditProfilePageRoutingModule,
         HeaderPageModule,
         FooterPageModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        UserNotLoggedMessagePageModule
     ],
   declarations: [UserEditProfilePage]
 })

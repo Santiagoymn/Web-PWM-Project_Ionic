@@ -1,5 +1,9 @@
 <ion-content [fullscreen]="true">
   <app-header></app-header>
+  <div *ngIf="getLogged() !== true">
+    <app-user-not-logged-message></app-user-not-logged-message>
+  </div>
+
   <div *ngIf="getLogged() === true">
     <div class="container-fluid profile">
       <div class="row">
