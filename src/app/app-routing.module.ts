@@ -45,11 +45,10 @@ const routes: Routes = [
   },
   {
     path: 'actividad',
-    loadChildren: () => import('./activity-page-information/activity-page-information.module')
+    loadChildren: () => import('./activity-page/activity-page-information/activity-page-information.module')
       .then( m => m.ActivityPageInformationPageModule)
   },
-
-  {
+    {
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
   },

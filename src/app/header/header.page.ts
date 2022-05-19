@@ -3,6 +3,7 @@ import {GetterFirebaseService} from '../serviceGeneral/getter-firebase.service';
 import {Categoria} from '../objetos';
 import {tap} from 'rxjs';
 import * as $ from 'jquery';
+import {getAuth} from 'firebase/auth';
 
 @Component({
   selector: 'app-header',
@@ -62,11 +63,9 @@ export class HeaderPage implements OnInit {
   }
 
   getLogged(): boolean{
-    if (sessionStorage.getItem('logged') === 'true'){
-      return true;
-    }else {
-      return false;
-    }
+    const auth = getAuth();
+    const user = auth.currentUser;
+    return user !== null;
   }
 
 }
