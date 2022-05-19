@@ -23,9 +23,7 @@
   align-self: center;
   border: 1.5px solid #f1f1f1 !important;
   height: auto;
-
 }
-
 .imagenPerfil{
   align-self: center;
   width:100% !important;
@@ -35,7 +33,6 @@
 .imagenPerfil ion-img{
   object-fit: cover;
 }
-
 .buttonsEditProfile{
   align-self: center;
 }
@@ -43,6 +40,9 @@
   background-color: #CEE0FC;
   border-radius: 10%;
   height: auto;
+}
+.formEditInput{
+  align-self: center;
 }
 
 
@@ -94,11 +94,7 @@
     margin-bottom:2rem;
     align-self: center;
     border:1.5px solid #f1f1f1 !important;
-    justify-content: center;
     width: 40rem;
-  }
-  .formEditInput{
-    align-self: center;
   }
 
 }
@@ -109,35 +105,44 @@
 */
 @media (min-width: 640px) and (max-width: 960px) {
   .profile{
-    min-height: 100vh;
-    padding: 2rem;
+    min-height: 60vh;
+    padding: 3rem;
     background-size: 100% 100%;
     margin-bottom: -5rem;
   }
   .textoPerfil{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .iconoPerfil{
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-top: 2rem;
   }
-
   .nombreApellidos{
-    font-size: 2.5rem;
-    margin-top:2rem;
+    font-size: 2rem;
+    width:40rem;
+    margin-bottom:2rem;
   }
   .imagenPerfil{
     margin-top:5rem;
     max-width: 12rem !important;
     max-height: 12rem !important;
   }
-
   .buttonsEditProfile{
     margin-top: 2rem;
     height: 2rem;
     margin-bottom: 8rem;
     font-size: 1rem;
+  }
+  #saveChangesButton{
+    margin-left: 4rem;
+  }
+  #file-upload{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    align-self: center;
+    border:1.5px solid #f1f1f1 !important;
+    width: 40rem;
   }
 }
 
@@ -147,7 +152,7 @@
 */
 @media (max-width: 640px) {
   .profile{
-    min-height: 100vh;
+    min-height: 85vh;
     padding: 2rem;
     background-size: 100% 100%;
     margin-bottom: -5rem;
@@ -156,24 +161,35 @@
     font-size: 1.5rem;
   }
   .iconoPerfil{
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
     margin-top: 2rem;
   }
-
-  #nombreApellidos{
-    font-size: 2.5rem;
+  .nombreApellidos{
+    font-size: 1.5rem;
+    width:26rem;
+    margin-bottom:2rem;
   }
-  .imagenPerfil {
-    margin-top: 5rem;
+  .imagenPerfil{
+    margin-top:4rem;
     max-width: 12rem !important;
     max-height: 12rem !important;
   }
   .buttonsEditProfile{
     margin-top: 2rem;
-    height: 1rem;
-    margin-bottom: 8rem;
+    height: 2rem;
+    margin-bottom: 6rem;
     font-size: 1rem;
+  }
+  #saveChangesButton{
+    margin-left: 2rem;
+  }
+  #file-upload{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    align-self: center;
+    border:1.5px solid #f1f1f1 !important;
+    width: 26rem;
   }
 
 }
