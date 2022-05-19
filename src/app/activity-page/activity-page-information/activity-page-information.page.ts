@@ -25,7 +25,6 @@ export class ActivityPageInformationPage implements OnInit {
       this.user = null;
     }
 
-    const id = '#checkbox';
     if(this.user){
       this.isHidden = false;
     }else{
