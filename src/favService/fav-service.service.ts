@@ -89,7 +89,11 @@ export class FavServiceService {
 
   checkActivity(activity, email){
     return this.dbInstance.executeSql(`
-      SELECT * FROM ${this.dbTable} WHERE email = ${email} AND activity = ${activity}`, [])
-      .then((res) => res == null);
+    SELECT * FROM ${this.dbTable} WHERE email = ${email} AND activity = ${activity}`, [])
+      .then((res) => {
+        if (res.rows.length === 0) {
+          return false;
+        }
+      });
   }
 }
