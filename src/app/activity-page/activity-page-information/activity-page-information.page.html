@@ -2,7 +2,7 @@
   <div *ngFor="let actividad of actividades">
   <div *ngIf="actividad.name === actividadClicada()">
     <div class="posicionamientoImagenFondo">
-      <ion-checkbox (ionChange)="checkBoxClick($event)"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="checked" (ionChange)="checkBoxClick($event)"></ion-checkbox>
       <ion-img src="{{actividad.url}}" alt="{{actividad.name}}" class="imagenFondo"></ion-img>
       <div class="centrado">
         <span class="colorFondo"><div class="nombreActividadImagen">{{actividad.name}}</div></span>

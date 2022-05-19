@@ -19,20 +19,18 @@ export class FavServiceService {
 
   // Create SQLite database
   databaseConn() {
-    alert('COMIENZA A CREAR LA BASE DE DATOS');
   this.platform.ready().then(() => {
           this.sqlite.create({
             name: this.dbName,
             location: 'default'
           }).then((sqLite: SQLiteObject) => {
-            alert('CREANDO LA BASE DE DATOS...');
             this.dbInstance = sqLite;
             sqLite.executeSql(`
               CREATE TABLE IF NOT EXISTS ${this.dbTable} (
                 userId INTEGER PRIMARY KEY,
                 email varchar(255),
                 activity varchar(255))`, []);
-            }).then(() => alert('BASE DE DATOS CREADA SATISFACTORIAMENTE'))
+            })
             .catch((error) => alert('error'));
         })
         .catch((error) => alert('error'));
@@ -40,7 +38,6 @@ export class FavServiceService {
 
   // Add new Fav Activity
   public addFav(email, activity) {
-    alert('AÑADIENDO A FAVORITOS...');
     // validation
     if (!email.length || !activity.length) {
       alert('Provide both email & name');
@@ -54,7 +51,6 @@ export class FavServiceService {
   }
 
   getAllFavs() {
-    alert('OBTENIENDO TODOS LOS FAVORITOS');
     return this.dbInstance.executeSql(`
       SELECT * FROM ${this.dbTable}`, []).then((res) => {
       this.activities = [];
@@ -83,11 +79,20 @@ export class FavServiceService {
   // Delete seleted activity
   deleteFav(email, activity) {
     this.dbInstance.executeSql(`
-      DELETE FROM ${this.dbTable} WHERE activity = ${activity} and email = ${email}`, [])
+      DELETE FROM ${this.dbTable} WHERE activity = ${activity} AND email = ${email}`, [])
       .then(() => {
       })
       .catch(e => {
         alert(JSON.stringify(e));
+      });
+  }
+
+  checkActivity(activity, email){
+    return this.dbInstance.executeSql(`
+      SELECT * FROM ${this.dbTable} WHERE email = ? AND activity = ?`, [email, activity])
+      // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+      .then(function(res){
+        return res == null;
       });
   }
 }
