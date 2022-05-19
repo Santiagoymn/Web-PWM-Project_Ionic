@@ -18,10 +18,10 @@
             <h3 class="textoPerfil" id="nombreApellidos">{{this.displayName}}</h3>
             <p class="textoPerfil">{{this.email}}</p>
             <div class="favoritosLink">
-              <a [routerLink]="['/home']" class="favoritosTexto">
+              <a [routerLink]="['/favourites-list']" class="favoritosTexto">
                   Lista de actividades favoritas
               </a>
-              <ion-img class="iconoPerfil" id="corazonIcono" [routerLink]="['/home']" src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2FiconoCorazon.png?alt=media&token=fe3f6f6c-7e26-44c0-ac9c-8a010f04f2e3"></ion-img>
+              <ion-img class="iconoPerfil" id="corazonIcono" [routerLink]="['/favourites-list']" src="https://firebasestorage.googleapis.com/v0/b/pwm-project-aa26c.appspot.com/o/iconos%2FiconoCorazon.png?alt=media&token=fe3f6f6c-7e26-44c0-ac9c-8a010f04f2e3"></ion-img>
             </div>
             <div class="botonLogOut">
               <ion-button type="submit" fill="outline" (click)='onSubmitLogOut()'>
