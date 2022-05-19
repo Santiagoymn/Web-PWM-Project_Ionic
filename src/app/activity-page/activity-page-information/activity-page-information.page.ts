@@ -14,17 +14,30 @@ export class ActivityPageInformationPage implements OnInit {
   @Input() empresa!: Empresa;
   empresas!: Empresa[];
   actividades!: Actividad[];
-  user: string;
+  user: string | null;
   checked: boolean;
-  constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
-    this.user = getAuth().currentUser.email;
+  isHidden: boolean;
 
-    alert(this.favService.checkActivity(localStorage.getItem('activity'), this.user));
+  constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
+    try {
+      this.user = getAuth().currentUser.email;
+    }catch (e){
+      this.user = null;
+    }
+
+    const id = '#checkbox';
+    if(this.user){
+      this.isHidden = false;
+    }else{
+      this.isHidden = true;
+    }
+
+    /*alert(this.favService.checkActivity(localStorage.getItem('activity'), this.user));
     if(this.favService.checkActivity(localStorage.getItem('activity'), this.user)){
       this.checked = true;
     }else{
       this.checked = false;
-    }
+    }*/
   }
 
   async ngOnInit() {
