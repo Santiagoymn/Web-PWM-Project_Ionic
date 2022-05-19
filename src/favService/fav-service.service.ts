@@ -89,10 +89,7 @@ export class FavServiceService {
 
   checkActivity(activity, email){
     return this.dbInstance.executeSql(`
-      SELECT * FROM ${this.dbTable} WHERE email = ? AND activity = ?`, [email, activity])
-      // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
-      .then(function(res){
-        return res == null;
-      });
+      SELECT * FROM ${this.dbTable} WHERE email = ${email} AND activity = ${activity}`, [])
+      .then((res) => res == null);
   }
 }

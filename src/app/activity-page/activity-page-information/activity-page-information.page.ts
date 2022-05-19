@@ -19,6 +19,7 @@ export class ActivityPageInformationPage implements OnInit {
   constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
     this.user = getAuth().currentUser.email;
 
+    alert(this.favService.checkActivity(localStorage.getItem('activity'), this.user));
     if(this.favService.checkActivity(localStorage.getItem('activity'), this.user)){
       this.checked = true;
     }else{
