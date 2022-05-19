@@ -61,6 +61,10 @@ const routes: Routes = [
     path: 'activity-page-empresas',
     // eslint-disable-next-line max-len
     loadChildren: () => import('./activity-page/activity-page-empresas/activity-page-empresas.module').then(m => m.ActivityPageEmpresasPageModule)
+  },
+  {
+    path: 'user-edit-profile',
+    loadChildren: () => import('./user-edit-profile/user-edit-profile.module').then( m => m.UserEditProfilePageModule)
   }
 ];
 
