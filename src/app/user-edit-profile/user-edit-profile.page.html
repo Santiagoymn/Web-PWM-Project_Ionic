@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <app-header></app-header>
+  <div *ngIf="getLogged() === true">
+    <div class="container-fluid profile">
+      <div class="row">
+        <div class="col-1 col-sm-2 col-lg-3">
+        </div>
+        <div class="col-12 col-sm-8 col-lg-6">
+          <div class="contenedorProfile">
+            <ion-avatar class="imagenPerfil">
+              <ion-img src="{{this.photoURL}}"></ion-img>
+            </ion-avatar>
+            <ion-input id="file-upload" class="inputFile" type="file" (change)="selectFile($event)"></ion-input>
+            <form class="formEditInput" [formGroup]="saveForm" (ngSubmit)="onSubmitSaveChanges()" novalidate>
+              <ion-input type="text" name="nombreApellidos" id="nombreApellidosInput" class="nombreApellidos" formControlName="nombreApellidos" [(ngModel)]="displayName"></ion-input>
+            </form>
+
+              <p class="textoPerfil">{{this.email}}</p>
+            <div class="buttonsEditProfile">
+              <ion-button type="submit" fill="outline" (click)='goBack()'>
+                Atrás
+              </ion-button>
+              <ion-button type="submit" fill="outline" id="saveChangesButton" (click)="onSubmitSaveChanges()">
+                Guardar
+              </ion-button>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-1 col-sm-2 col-lg-3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</ion-content>
+
+
