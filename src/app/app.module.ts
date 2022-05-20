@@ -17,9 +17,9 @@ import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import {CategoryPageActividadesPageModule} from './category-page-actividades/category-page-actividades';
 import {FooterPageModule} from './footer/footer.module';
-import {CarruselPage} from './carrusel/carrusel.page';
-import {HomePageCategoriesPageModule} from './home-page-categories/home-page-categories.module';
-import {HomePageAboutUsPageModule} from './home-page-about-us/home-page-about-us.module';
+import {CarruselPage} from './home/carrusel/carrusel.page';
+import {HomePageCategoriesPageModule} from './home/home-page-categories/home-page-categories.module';
+import {HomePageAboutUsPageModule} from './home/home-page-about-us/home-page-about-us.module';
 import {HeaderPageModule} from './header/header.module';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 
