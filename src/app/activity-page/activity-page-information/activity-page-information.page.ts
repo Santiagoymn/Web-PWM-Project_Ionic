@@ -19,6 +19,7 @@ export class ActivityPageInformationPage implements OnInit {
   isHidden: boolean;
 
   constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
+    alert('Entrando en activity-page');
     try {
       this.user = getAuth().currentUser.email;
     }catch (e){
@@ -27,20 +28,19 @@ export class ActivityPageInformationPage implements OnInit {
 
     if(this.user){
       this.isHidden = false;
+      if(this.favService.checkActivity(localStorage.getItem('activity'), this.user).then(res => res === true)){
+        alert('Checkbox activo');
+        this.checked = true;
+      }else{
+        alert('Checkbox inactivo');
+        this.checked = false;
+      }
     }else{
       this.isHidden = true;
     }
-
-    /*alert(this.favService.checkActivity(localStorage.getItem('activity'), this.user));
-    if(this.favService.checkActivity(localStorage.getItem('activity'), this.user)){
-      this.checked = true;
-    }else{
-      this.checked = false;
-    }*/
   }
 
   async ngOnInit() {
-    await this.favService.databaseConn();
     this.actividades = await this.getterJsonService.getCategoriaActividades(localStorage.getItem('category'));
   }
 

@@ -8,32 +8,28 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 })
 export class FavServiceService {
 
-  readonly dbName: string = 'remotestack.db';
+  readonly dbName: string = 'remotestack2.db';
   readonly dbTable: string = 'favsTable';
   activities: Array<Actividad>;
   private dbInstance: SQLiteObject;
 
   constructor(private platform: Platform, private sqlite: SQLite) {
-
-  }
-
-  // Create SQLite database
-  databaseConn() {
-  this.platform.ready().then(() => {
-          this.sqlite.create({
-            name: this.dbName,
-            location: 'default'
-          }).then((sqLite: SQLiteObject) => {
-            this.dbInstance = sqLite;
-            sqLite.executeSql(`
+    // Creating the database
+    this.platform.ready().then(() => {
+      this.sqlite.create({
+        name: this.dbName,
+        location: 'default'
+      }).then((sqLite: SQLiteObject) => {
+        this.dbInstance = sqLite;
+        sqLite.executeSql(`
               CREATE TABLE IF NOT EXISTS ${this.dbTable} (
                 userId INTEGER PRIMARY KEY,
                 email varchar(255),
                 activity varchar(255))`, []);
-            })
-            .catch((error) => alert('error'));
-        })
+      })
         .catch((error) => alert('error'));
+    })
+      .catch((error) => alert('error'));
   }
 
   // Add new Fav Activity
@@ -87,9 +83,18 @@ export class FavServiceService {
       });
   }
 
-  checkActivity(activity, email){
+  checkActivity(activity, email): Promise<any>{
     return this.dbInstance.executeSql(`
-      SELECT * FROM ${this.dbTable} WHERE email = ${email} AND activity = ${activity}`, [])
-      .then((res) => res == null);
+      SELECT * FROM ${this.dbTable} WHERE email = ? AND activity = ?`, [email, activity])
+      .then((res) => {
+        if (res.rows.length === 0) {
+            return false;
+        }else{
+          return true;
+        }
+      })
+      .catch(e => {
+        alert(JSON.stringify(e));
+      });
   }
 }
