@@ -52,6 +52,10 @@ const routes: Routes = [
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
   },
+  {
+    path: 'favourites-list',
+    loadChildren: () => import('./favourites-list/favourites-list.module').then( m => m.FavouritesListPageModule)
+  }
 ];
 
 @NgModule({

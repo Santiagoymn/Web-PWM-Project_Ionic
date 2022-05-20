@@ -42,14 +42,14 @@ export class FavouritesListPage implements OnInit {
 
   checkBoxClick(e){
     if(e.currentTarget.checked){ // Usuario añade actividad a favs
-      alert('VA A AÑADIR A FAVORITOS');
+      //alert('VA A AÑADIR A FAVORITOS');
       this.favService.addFav(this.user, localStorage.getItem('activity'));
     }else{ // Usuario elimina actividad a favs
-      alert('VA A ELIMINAR DE FAVORITOS');
+      //alert('VA A ELIMINAR DE FAVORITOS');
       this.favService.deleteFav(this.user, localStorage.getItem('activity'));
     }
-    alert('LISTA DE FAVORITOS ACTUAL: ');
-    const act = this.favService.getAllFavs().then(res => alert(res[0]));
+    //alert('LISTA DE FAVORITOS ACTUAL: ');
+    //const act = this.favService.getAllFavs().then(res => alert(res[0]));
   }
 
   puestaVariableActivity(identificador: any){

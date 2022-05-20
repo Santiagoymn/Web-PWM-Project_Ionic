@@ -1,5 +1,5 @@
-<app-header></app-header>
 <ion-content>
+  <app-header></app-header>
   <div *ngFor="let actividad of actividades">
   <div *ngIf="actividad.name === actividadClicada()">
     <div class="posicionamientoImagenFondo">
@@ -25,8 +25,8 @@
     </div>
   </div>
 </div>
+  <app-footer></app-footer>
 </ion-content>
-<app-footer></app-footer>
 
 
 
