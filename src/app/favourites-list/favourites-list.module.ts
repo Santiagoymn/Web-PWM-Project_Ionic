@@ -9,7 +9,7 @@ import { FavouritesListPageRoutingModule } from './favourites-list-routing.modul
 import { FavouritesListPage } from './favourites-list.page';
 import {FooterPageModule} from '../footer/footer.module';
 import {HeaderPageModule} from '../header/header.module';
-import {UserNotLoggedMessagePageModule} from '../user-not-logged-message/user-not-logged-message.module';
+import {UserNotLoggedMessagePageModule} from '../user-profile/user-not-logged-message/user-not-logged-message.module';
 
 @NgModule({
     imports: [
