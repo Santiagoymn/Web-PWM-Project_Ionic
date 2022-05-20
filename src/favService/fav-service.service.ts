@@ -10,7 +10,7 @@ export class FavServiceService {
 
   readonly dbName: string = 'remotestack2.db';
   readonly dbTable: string = 'favsTable';
-  activities: Array<Actividad>;
+  activities: Array<string>;
   private dbInstance: SQLiteObject;
 
   constructor(private platform: Platform, private sqlite: SQLite) {
@@ -33,7 +33,7 @@ export class FavServiceService {
   }
 
   // Add new Fav Activity
-  public addFav(email, activity) {
+  addFav(email, activity) {
     // validation
     if (!email.length || !activity.length) {
       alert('Provide both email & name');
@@ -41,9 +41,8 @@ export class FavServiceService {
     }
     this.dbInstance.executeSql(`
         INSERT INTO ${this.dbTable} (email, activity) VALUES ('${email}', '${activity}')`, [])
-      .then(() => {
-        alert('Success');
-      });
+      .then(() => {});
+    this.dbInstance.executeSql(`COMMIT`);
   }
 
   getAllFavs() {
@@ -52,7 +51,8 @@ export class FavServiceService {
       this.activities = [];
       if (res.rows.length > 0) {
         for (let i = 0; i < res.rows.length; i++) {
-          this.activities.push(res.rows.item(i));
+          alert(res.rows.item(i).activity);
+          this.activities.push(res.rows.item(i).activity);
         }
         return this.activities;
       }
@@ -75,7 +75,7 @@ export class FavServiceService {
   // Delete seleted activity
   deleteFav(email, activity) {
     this.dbInstance.executeSql(`
-      DELETE FROM ${this.dbTable} WHERE activity = ${activity} AND email = ${email}`, [])
+      DELETE FROM ${this.dbTable} WHERE activity = ? AND email = ?`, [activity, email])
       .then(() => {
       })
       .catch(e => {
@@ -83,18 +83,10 @@ export class FavServiceService {
       });
   }
 
-  checkActivity(activity, email): Promise<any>{
+  async checkActivity(activity, email): Promise<boolean>{
     return this.dbInstance.executeSql(`
       SELECT * FROM ${this.dbTable} WHERE email = ? AND activity = ?`, [email, activity])
-      .then((res) => {
-        if (res.rows.length === 0) {
-            return false;
-        }else{
-          return true;
-        }
-      })
-      .catch(e => {
-        alert(JSON.stringify(e));
-      });
+      .then((res) => (res.rows.length !== 0))
+      .catch(e => false);
   }
 }

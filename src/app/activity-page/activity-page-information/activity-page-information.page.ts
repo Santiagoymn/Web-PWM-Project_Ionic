@@ -19,29 +19,29 @@ export class ActivityPageInformationPage implements OnInit {
   isHidden: boolean;
 
   constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
-    alert('Entrando en activity-page');
+    alert('Entrando en activity-page2');
     try {
       this.user = getAuth().currentUser.email;
     }catch (e){
       this.user = null;
     }
+  }
+
+  async ngOnInit() {
+    this.actividades = await this.getterJsonService.getCategoriaActividades(localStorage.getItem('category'));
 
     if(this.user){
       this.isHidden = false;
-      if(this.favService.checkActivity(localStorage.getItem('activity'), this.user).then(res => res === true)){
-        alert('Checkbox activo');
+      if(await Promise.resolve(this.favService.checkActivity(localStorage.getItem('activity'), this.user))){
+        alert('Es fav');
         this.checked = true;
       }else{
-        alert('Checkbox inactivo');
+        alert('No es fav');
         this.checked = false;
       }
     }else{
       this.isHidden = true;
     }
-  }
-
-  async ngOnInit() {
-    this.actividades = await this.getterJsonService.getCategoriaActividades(localStorage.getItem('category'));
   }
 
   actividadClicada(){
@@ -57,6 +57,6 @@ export class ActivityPageInformationPage implements OnInit {
       this.favService.deleteFav(this.user, localStorage.getItem('activity'));
     }
     alert('LISTA DE FAVORITOS ACTUAL: ');
-    const act = this.favService.getAllFavs().then(res => alert(res[0]));
+    const act = this.favService.getAllFavs();
   }
 }

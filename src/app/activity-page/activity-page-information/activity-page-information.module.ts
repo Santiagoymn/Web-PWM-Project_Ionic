@@ -8,6 +8,8 @@ import { ActivityPageInformationPageRoutingModule } from './activity-page-inform
 
 import { ActivityPageInformationPage } from './activity-page-information.page';
 import {ActivityPageEmpresasPageModule} from "../activity-page-empresas/activity-page-empresas.module";
+import {HeaderPageModule} from "../../header/header.module";
+import {FooterPageModule} from "../../footer/footer.module";
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import {ActivityPageEmpresasPageModule} from "../activity-page-empresas/activity
     FormsModule,
     IonicModule,
     ActivityPageInformationPageRoutingModule,
-    ActivityPageEmpresasPageModule
+    ActivityPageEmpresasPageModule,
+    HeaderPageModule,
+    FooterPageModule
   ],
   declarations: [ActivityPageInformationPage]
 })
