@@ -44,32 +44,14 @@ const routes: Routes = [
     loadChildren: () => import('./register-message/register-message.module').then( m => m.RegisterMessagePageModule)
   },
   {
-    path: 'user-profile',
-    loadChildren: () => import('./user-profile/user-profile.module')
-      .then( m => m.UserProfilePageModule)
-  },
-  {
     path: 'actividad',
     loadChildren: () => import('./activity-page/activity-page-information/activity-page-information.module')
       .then( m => m.ActivityPageInformationPageModule)
   },
-  {
-    path: 'user-not-logged-message',
-    loadChildren: () => import('./user-not-logged-message/user-not-logged-message.module').then( m => m.UserNotLoggedMessagePageModule)
+    {
+    path: 'user-profile',
+    loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
   },
-  {
-    path: 'activity-page-empresas',
-    // eslint-disable-next-line max-len
-    loadChildren: () => import('./activity-page/activity-page-empresas/activity-page-empresas.module').then(m => m.ActivityPageEmpresasPageModule)
-  },
-  {
-    path: 'user-edit-profile',
-    loadChildren: () => import('./user-edit-profile/user-edit-profile.module').then( m => m.UserEditProfilePageModule)
-  },
-  {
-    path: 'favourites-list',
-    loadChildren: () => import('./favourites-list/favourites-list.module').then( m => m.FavouritesListPageModule)
-  }
 ];
 
 @NgModule({

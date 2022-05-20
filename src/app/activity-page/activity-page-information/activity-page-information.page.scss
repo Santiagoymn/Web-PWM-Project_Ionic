@@ -16,12 +16,52 @@
   transform: translate(-50%, -50%);
 }
 
-ion-checkbox{
+/// CHECKBOX ////
+#checkdiv{
   position: absolute;
-  top: 5%;
-  left: 98%;
-  transform: translate(-10%, -70%);
+  top: 15%;
+  left: 95%;
+  transform: translate(-40%, -80%)
 }
+
+[id="heart"] {
+  position: absolute;
+  left: 0vw;
+  width: 30px;
+  height: 30px;
+}
+
+[for="heart"] {
+  color: #aab8c2;
+  cursor: pointer;
+  font-size: 2em;
+  float: right;
+  transition: color 0.2s ease-in-out;
+}
+
+[for="heart"]:hover {
+  color: grey;
+}
+
+[for="heart"]::selection {
+  color: white;
+  background: transparent;
+}
+
+[for="heart"]::-moz-selection {
+  color: white;
+  background: transparent;
+}
+
+[id="heart"]:checked + label {
+  color: #e2264d;
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+}
+
+
+
+@keyframes heart {0%, 17.5% {font-size: 0;}}
 
 
 

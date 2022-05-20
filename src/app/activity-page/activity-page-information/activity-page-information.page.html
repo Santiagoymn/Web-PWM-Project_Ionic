@@ -1,8 +1,12 @@
+<app-header></app-header>
 <ion-content>
   <div *ngFor="let actividad of actividades">
   <div *ngIf="actividad.name === actividadClicada()">
     <div class="posicionamientoImagenFondo">
-      <ion-checkbox [(ngModel)]="checked" (ionChange)="checkBoxClick($event)"></ion-checkbox>
+      <div [hidden]="isHidden" id="checkdiv">
+        <input id="heart" type="checkbox" [(ngModel)]="checked" (change)="checkBoxClick($event)"/>
+        <!--<label for="heart">❤</label>-->
+      </div>
       <ion-img src="{{actividad.url}}" alt="{{actividad.name}}" class="imagenFondo"></ion-img>
       <div class="centrado">
         <span class="colorFondo"><div class="nombreActividadImagen">{{actividad.name}}</div></span>
@@ -22,6 +26,7 @@
   </div>
 </div>
 </ion-content>
+<app-footer></app-footer>
 
 
 

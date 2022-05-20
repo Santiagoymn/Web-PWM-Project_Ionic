@@ -14,26 +14,34 @@ export class ActivityPageInformationPage implements OnInit {
   @Input() empresa!: Empresa;
   empresas!: Empresa[];
   actividades!: Actividad[];
-  user: string;
+  user: string | null;
   checked: boolean;
+  isHidden: boolean;
+
   constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
+    alert('Entrando en activity-page2');
     try {
       this.user = getAuth().currentUser.email;
     }catch (e){
       this.user = null;
     }
-
-    alert(this.favService.checkActivity(localStorage.getItem('activity'), this.user));
-    if(this.favService.checkActivity(localStorage.getItem('activity'), this.user)){
-      this.checked = true;
-    }else{
-      this.checked = false;
-    }
   }
 
   async ngOnInit() {
-    await this.favService.databaseConn();
     this.actividades = await this.getterJsonService.getCategoriaActividades(localStorage.getItem('category'));
+
+    if(this.user){
+      this.isHidden = false;
+      if(await Promise.resolve(this.favService.checkActivity(localStorage.getItem('activity'), this.user))){
+        alert('Es fav');
+        this.checked = true;
+      }else{
+        alert('No es fav');
+        this.checked = false;
+      }
+    }else{
+      this.isHidden = true;
+    }
   }
 
   actividadClicada(){
@@ -49,6 +57,6 @@ export class ActivityPageInformationPage implements OnInit {
       this.favService.deleteFav(this.user, localStorage.getItem('activity'));
     }
     alert('LISTA DE FAVORITOS ACTUAL: ');
-    const act = this.favService.getAllFavs().then(res => alert(res[0]));
+    const act = this.favService.getAllFavs();
   }
 }

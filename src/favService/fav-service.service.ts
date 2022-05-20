@@ -11,11 +11,9 @@ export class FavServiceService {
   readonly dbName: string = 'remotestack.db';
   readonly dbTable: string = 'favsTable';
   activities: Array<Actividad>;
-  activities2: Array<Actividad>;
   private dbInstance: SQLiteObject;
 
   constructor(private platform: Platform, private sqlite: SQLite) {
-    this.databaseConn();
 
   }
 
@@ -70,15 +68,12 @@ export class FavServiceService {
   // Get user by user email
   getActivities(email): Promise<any> {
     return this.dbInstance.executeSql(`
-      SELECT * FROM ${this.dbTable} WHERE email = ?`, [email]).then((res) => {
-      this.activities2 = [];
-      if (res.rows.length > 0) {
-        for (let i = 0; i < res.rows.length; i++) {
-          this.activities2.push(res.rows.item(i).activity);
-        }
-        return this.activities2;
-      }
-      });
+      SELECT * FROM ${this.dbTable} WHERE email = ?`, [email])
+      .then((res) => ({
+        userId: res.rows.item(0).user_id,
+        email: res.rows.item(0).email,
+        activity: res.rows.item(0).activity
+      }));
   }
 
   // Delete seleted activity
@@ -94,11 +89,7 @@ export class FavServiceService {
 
   checkActivity(activity, email){
     return this.dbInstance.executeSql(`
-    SELECT * FROM ${this.dbTable} WHERE email = ${email} AND activity = ${activity}`, [])
-      .then((res) => {
-        if (res.rows.length === 0) {
-          return false;
-        }
-      });
+      SELECT * FROM ${this.dbTable} WHERE email = ${email} AND activity = ${activity}`, [])
+      .then((res) => res == null);
   }
 }
