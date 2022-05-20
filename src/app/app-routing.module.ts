@@ -49,6 +49,10 @@ const routes: Routes = [
       .then( m => m.ActivityPageInformationPageModule)
   },
     {
+    path: 'user-edit-profile',
+    loadChildren: () => import('./user-edit-profile/user-edit-profile.module').then( m => m.UserEditProfilePageModule)
+  },
+  {
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
   },

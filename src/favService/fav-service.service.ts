@@ -68,6 +68,7 @@ export class FavServiceService {
       this.activities2 = [];
       if (res.rows.length > 0) {
         for (let i = 0; i < res.rows.length; i++) {
+          alert(res.rows.item(i).activity);
           this.activities2.push(res.rows.item(i).activity);
         }
         return this.activities2;
@@ -84,6 +85,7 @@ export class FavServiceService {
       .catch(e => {
         alert(JSON.stringify(e));
       });
+    this.dbInstance.executeSql(`COMMIT`);
   }
 
   async checkActivity(activity, email): Promise<boolean>{
