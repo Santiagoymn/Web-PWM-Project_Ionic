@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { UserProfilePageRoutingModule } from './user-profile-routing.module';
 
 import { UserProfilePage } from './user-profile.page';
-import {UserNotLoggedMessagePageModule} from '../user-not-logged-message/user-not-logged-message.module';
+import {UserNotLoggedMessagePageModule} from './user-not-logged-message/user-not-logged-message.module';
 import {HeaderPageModule} from '../header/header.module';
 import {FooterPageModule} from '../footer/footer.module';
 

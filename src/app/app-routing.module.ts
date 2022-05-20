@@ -50,7 +50,7 @@ const routes: Routes = [
   },
     {
     path: 'user-edit-profile',
-    loadChildren: () => import('./user-edit-profile/user-edit-profile.module').then( m => m.UserEditProfilePageModule)
+    loadChildren: () => import('./user-profile/user-edit-profile/user-edit-profile.module').then(m => m.UserEditProfilePageModule)
   },
   {
     path: 'user-profile',
@@ -58,7 +58,7 @@ const routes: Routes = [
   },
   {
     path: 'favourites-list',
-    loadChildren: () => import('./favourites-list/favourites-list.module').then( m => m.FavouritesListPageModule)
+    loadChildren: () => import('./favourites-list/favourites-list.module').then(m => m.FavouritesListPageModule)
   }
 ];
 

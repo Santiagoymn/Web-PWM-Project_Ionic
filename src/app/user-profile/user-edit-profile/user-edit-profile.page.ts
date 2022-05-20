@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/compat/auth';
 import {Router} from '@angular/router';
 import {getAuth} from 'firebase/auth';
-import {FileUpload} from '../objetos';
-import {UsersService} from '../serviceUsers/users.service';
+import {FileUpload} from '../../objetos';
+import {UsersService} from '../../serviceUsers/users.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
