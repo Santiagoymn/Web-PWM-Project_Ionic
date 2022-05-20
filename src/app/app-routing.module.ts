@@ -41,7 +41,7 @@ const routes: Routes = [
   },
   {
     path: 'registered-succesful',
-    loadChildren: () => import('./register-message/register-message.module').then( m => m.RegisterMessagePageModule)
+    loadChildren: () => import('./register-form/register-message/register-message.module').then(m => m.RegisterMessagePageModule)
   },
   {
     path: 'actividad',
