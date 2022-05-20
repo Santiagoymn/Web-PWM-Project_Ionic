@@ -14,7 +14,7 @@ import {getAuth} from '@angular/fire/auth';
 export class FavouritesListPage implements OnInit {
 
   actividades!: Actividad[];
-  actividadesFav!: Actividad[];
+  actividadesFav!: string[];
   user: string;
 
   checked: boolean;
@@ -22,6 +22,12 @@ export class FavouritesListPage implements OnInit {
 
   constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
     this.user = getAuth().currentUser.email;
+
+    if(this.favService.checkActivity(localStorage.getItem('activity'), this.user)){
+      this.checked = true;
+    }else{
+      this.checked = false;
+    }
   }
 
   getLogged(){
@@ -29,7 +35,7 @@ export class FavouritesListPage implements OnInit {
   }
 
   async ngOnInit() {
-    this.actividades = await this.getterJsonService.getCategoriaActividades(localStorage.getItem('category'));
+    this.actividades = await this.getterJsonService.getTodasActividades();
     this.actividadesFav = await this.favService.getActivities('m@m.mm');
   }
 

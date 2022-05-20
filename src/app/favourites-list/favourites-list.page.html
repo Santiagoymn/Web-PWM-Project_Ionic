@@ -5,15 +5,16 @@
 <!--  </div>-->
 <!--  <div *ngIf="getLogged() === true">-->
     <div class="categoryWrapper">
+      <h2>Mi lista de actividades favoritas</h2>
       <div *ngFor="let actividadF of actividadesFav">
-        <div *ngFor="let actividad of actividades let z=index">
-          <div *ngIf="(actividad.name) === actividadF[z].name">
+        <div *ngFor="let actividad of actividades">
+          <div *ngIf="(actividad.name) === actividadF">
             <a routerLink="/actividad">
               <div class='actividad' (click)="puestaVariableActivity(actividad.name)" >
                 <div class='centrado'>
+                  <ion-checkbox [(ngModel)]="checked" (ionChange)="checkBoxClick($event)"></ion-checkbox>
                   <span class="colorFondo"><div class='nombreActividadImagen'>{{actividad.name}}</div></span>
                 </div>
-                <ion-checkbox [(ngModel)]="checked" (ionChange)="checkBoxClick($event)"></ion-checkbox>
                 <ion-img class='imagenActividad' src="{{actividad.url}}" alt ="{{actividad.name}}"></ion-img>
               </div>
             </a>

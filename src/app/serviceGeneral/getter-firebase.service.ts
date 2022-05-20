@@ -134,6 +134,21 @@ export class GetterFirebaseService {
     });
     return solucion;
   }
+
+
+  async getTodasActividades() {
+    const todasActividades = collection(this.db, 'actividades');
+    const q2 = query(todasActividades);
+    const querySnapshot2 = await getDocs(q2);
+
+    const solucion: Actividad[] = [];
+
+    querySnapshot2.forEach((doc) => {
+      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+      solucion.push((<Actividad>doc.data()));
+    });
+    return solucion;
+  }
 }
 
 
