@@ -12,7 +12,7 @@
             <a routerLink="/actividad">
               <div class='actividad' (click)="puestaVariableActivity(actividad.name)" >
                 <div class='centrado'>
-                  <ion-checkbox [(ngModel)]="checked" (ionChange)="checkBoxClick($event, actividad.name)"></ion-checkbox>
+                  <ion-checkbox [(ngModel)]="checked" (ionChange)="checkBoxClick($event)"></ion-checkbox>
                   <span class="colorFondo"><div class='nombreActividadImagen'>{{actividad.name}}</div></span>
                 </div>
                 <ion-img class='imagenActividad' src="{{actividad.url}}" alt ="{{actividad.name}}"></ion-img>
