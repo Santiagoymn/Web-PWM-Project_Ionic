@@ -1,9 +1,9 @@
 <ion-content [fullscreen]="true">
   <app-header></app-header>
-<!--  <div *ngIf="getLogged() !== true">-->
-<!--    <app-user-not-logged-message></app-user-not-logged-message>-->
-<!--  </div>-->
-<!--  <div *ngIf="getLogged() === true">-->
+  <div *ngIf="getLogged() !== true">
+    <app-user-not-logged-message></app-user-not-logged-message>
+  </div>
+  <div *ngIf="getLogged() === true">
 
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
@@ -16,8 +16,10 @@
           <div *ngIf="(actividad.name) === actividadF">
               <div class='actividad' (click)="puestaVariableActivity(actividad.name)" >
                 <div class='centrado'>
-                  <input id="heart" type="checkbox" [(ngModel)]="checked" (change)="checkBoxClickDelete($event, actividad.name)"/>
                   <span class="colorFondo"><div class='nombreActividadImagen'>{{actividad.name}}</div></span>
+                </div>
+                <div id="checkdiv">
+                  <input id="CBFavList" type="checkbox" [(ngModel)]="checked" (change)="checkBoxClickDelete($event, actividad.name)"/>
                 </div>
                 <ion-img [routerLink]="['/actividad']" class='imagenActividad' src="{{actividad.url}}" alt ="{{actividad.name}}"></ion-img>
               </div>
@@ -25,7 +27,7 @@
         </div>
       </div>
     </div>
-<!--  </div>-->
+  </div>
 
   <app-footer></app-footer>
 </ion-content>

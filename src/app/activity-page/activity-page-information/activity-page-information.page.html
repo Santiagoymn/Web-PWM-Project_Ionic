@@ -4,8 +4,7 @@
   <div *ngIf="actividad.name === actividadClicada()">
     <div class="posicionamientoImagenFondo">
       <div [hidden]="isHidden" id="checkdiv">
-        <input id="heart" type="checkbox" [(ngModel)]="checked" (change)="checkBoxClick($event)"/>
-        <!--<label for="heart">❤</label>-->
+        <input id="CBFav" type="checkbox" [(ngModel)]="checked" (change)="checkBoxClick($event)"/>
       </div>
       <ion-img src="{{actividad.url}}" alt="{{actividad.name}}" class="imagenFondo"></ion-img>
       <div class="centrado">

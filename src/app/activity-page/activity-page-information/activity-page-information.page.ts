@@ -19,7 +19,6 @@ export class ActivityPageInformationPage implements OnInit {
   isHidden: boolean;
 
   constructor(private getterJsonService: GetterFirebaseService, private favService: FavServiceService) {
-    //alert('Entrando en activity-page2');
     try {
       this.user = getAuth().currentUser.email;
     }catch (e){
@@ -33,10 +32,8 @@ export class ActivityPageInformationPage implements OnInit {
     if(this.user){
       this.isHidden = false;
       if(await Promise.resolve(this.favService.checkActivity(localStorage.getItem('activity'), this.user))){
-        alert('Es fav');
         this.checked = true;
       }else{
-        alert('No es fav');
         this.checked = false;
       }
     }else{
@@ -50,13 +47,9 @@ export class ActivityPageInformationPage implements OnInit {
 
   checkBoxClick(e){
     if(e.currentTarget.checked){ // Usuario añade actividad a favs
-      //alert('VA A AÑADIR A FAVORITOS');
       this.favService.addFav(this.user, localStorage.getItem('activity'));
     }else{ // Usuario elimina actividad a favs
-      //alert('VA A ELIMINAR DE FAVORITOS');
       this.favService.deleteFav(this.user, localStorage.getItem('activity'));
     }
-    //alert('LISTA DE FAVORITOS ACTUAL: ');
-    //const act = this.favService.getAllFavs();
   }
 }

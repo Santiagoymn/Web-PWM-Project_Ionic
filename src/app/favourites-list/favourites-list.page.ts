@@ -39,11 +39,8 @@ export class FavouritesListPage implements OnInit {
 
 
   checkBoxClickDelete(e, activity){
-    alert('clica checkbox');
     this.favService.deleteFav(this.user, activity);
     e.currentTarget.checked = false;
-    alert('Sale');
-    //window.location.reload();
   }
 
   puestaVariableActivity(identificador: any){
