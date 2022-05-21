@@ -8,8 +8,8 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 })
 export class FavServiceService {
 
-  readonly dbName: string = 'remotestack.db';
-  readonly dbTable: string = 'favsTable';
+  readonly dbName: string = 'users.db';
+  readonly dbTable: string = 'favs';
   activities: Array<Actividad>;
   activities2: string[];
   private dbInstance: SQLiteObject;
