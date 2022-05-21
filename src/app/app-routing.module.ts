@@ -25,15 +25,15 @@ const routes: Routes = [
   },
   {
     path: 'carrusel',
-    loadChildren: () => import('./carrusel/carrusel.module').then( m => m.CarruselPageModule)
+    loadChildren: () => import('./home/carrusel/carrusel.module').then(m => m.CarruselPageModule)
   },
   {
     path: 'home-page-categories',
-    loadChildren: () => import('./home-page-categories/home-page-categories.module').then( m => m.HomePageCategoriesPageModule)
+    loadChildren: () => import('./home/home-page-categories/home-page-categories.module').then(m => m.HomePageCategoriesPageModule)
   },
   {
     path: 'home-page-about-us',
-    loadChildren: () => import('./home-page-about-us/home-page-about-us.module').then( m => m.HomePageAboutUsPageModule)
+    loadChildren: () => import('./home/home-page-about-us/home-page-about-us.module').then(m => m.HomePageAboutUsPageModule)
   },
   {
     path: 'login',
@@ -41,7 +41,7 @@ const routes: Routes = [
   },
   {
     path: 'registered-succesful',
-    loadChildren: () => import('./register-message/register-message.module').then( m => m.RegisterMessagePageModule)
+    loadChildren: () => import('./register-form/register-message/register-message.module').then(m => m.RegisterMessagePageModule)
   },
   {
     path: 'actividad',
@@ -50,7 +50,7 @@ const routes: Routes = [
   },
     {
     path: 'user-edit-profile',
-    loadChildren: () => import('./user-edit-profile/user-edit-profile.module').then( m => m.UserEditProfilePageModule)
+    loadChildren: () => import('./user-profile/user-edit-profile/user-edit-profile.module').then(m => m.UserEditProfilePageModule)
   },
   {
     path: 'user-profile',
@@ -58,7 +58,7 @@ const routes: Routes = [
   },
   {
     path: 'favourites-list',
-    loadChildren: () => import('./favourites-list/favourites-list.module').then( m => m.FavouritesListPageModule)
+    loadChildren: () => import('./favourites-list/favourites-list.module').then(m => m.FavouritesListPageModule)
   }
 ];
 

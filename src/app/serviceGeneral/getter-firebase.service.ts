@@ -11,7 +11,6 @@ import {
   Empresa
 } from '../objetos';
 
-import {Observable} from 'rxjs';
 import {AngularFirestore} from '@angular/fire/compat/firestore';
 import {initializeApp} from 'firebase/app';
 import {environment} from '../../environments/environment';

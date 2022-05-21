@@ -1,7 +1,7 @@
 import { Component, ViewChild, Input } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
-import { Carrusel } from '../objetos';
-import {GetterFirebaseService} from '../serviceGeneral/getter-firebase.service';
+import { Carrusel } from '../../objetos';
+import {GetterFirebaseService} from '../../serviceGeneral/getter-firebase.service';
 import {tap} from 'rxjs';
 
 
@@ -137,7 +137,7 @@ export class CarruselPage {
   slidePrev(object, slideView) {
     slideView.slidePrev(500).then(() => {
       this.checkIfNavDisabled(object, slideView);
-    });;
+    });
   }
 
   //Method called when slide is changed by drag or navigation

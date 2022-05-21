@@ -5,11 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import {HomePageCategoriesPageModule} from '../home-page-categories/home-page-categories.module';
-import {HomePageAboutUsPageModule} from '../home-page-about-us/home-page-about-us.module';
-import {CarruselPage} from '../carrusel/carrusel.page';
-import {HeaderPageModule} from "../header/header.module";
-import {FooterPageModule} from "../footer/footer.module";
+import {HomePageCategoriesPageModule} from './home-page-categories/home-page-categories.module';
+import {HomePageAboutUsPageModule} from './home-page-about-us/home-page-about-us.module';
+import {CarruselPage} from './carrusel/carrusel.page';
+import {HeaderPageModule} from '../header/header.module';
+import {FooterPageModule} from '../footer/footer.module';
 
 
 @NgModule({
